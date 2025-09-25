@@ -1,0 +1,85 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "slideshow_E7j3yF": {
+      "type": "slideshow",
+      "custom_css": [
+        ".sun_content {font-size: 16px;}",
+        "@media screen and (max-width: 749px) {.h2 {font-size: 19px !important; } .sun_content {font-size: 10px !important; } .slideshow-textbox {padding: 11px !important; } .prose {padding-top: -10px !important; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "image_with_text_overlay_EkVRYR": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_RaznAg": {
+          "type": "heading",
+          "settings": {
+            "text": "Get all content",
+            "heading_tag": "h1"
+          }
+        },
+        "button_NWaWWm": {
+          "type": "button",
+          "settings": {
+            "style": "fill",
+            "size": "lg",
+            "text": "Download",
+            "url": "https://drive.google.com/file/d/1ioeBp7OnzMe-9VcLVmjme63dn46lo8sJ/view",
+            "background": "#f37835",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RaznAg",
+        "button_NWaWWm"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/1_ece38817-19f6-439e-9d10-9e5dab28a4b4.jpg",
+        "mobile_image": "shopify://shop_images/1_ece507a2-acb9-4dcc-91b5-7a079fd40c5c.jpg",
+        "mobile_text_position": "place-self-end-center text-center",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+        "text_color": "#32312a",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_E7j3yF",
+    "image_with_text_overlay_EkVRYR"
+  ]
+}

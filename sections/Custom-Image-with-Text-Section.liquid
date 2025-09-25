@@ -1,0 +1,208 @@
+{% schema %}
+{
+  "name": "Image with Overlay",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "background_text",
+      "label": "Background Text",
+      "default": "PECKPERK"
+    },
+    {
+      "type": "text",
+      "id": "title_line1",
+      "label": "Title Line 1",
+      "default": "Wildlife Watching,"
+    },
+    {
+      "type": "text",
+      "id": "title_line2",
+      "label": "Title Line 2",
+      "default": "Unforgettable Discovering"
+    },
+    {
+      "type": "textarea",
+      "id": "quote_text",
+      "label": "Quote Text",
+      "default": "PeckPerk incorporates a squirrel-proof algorithm designed to effectively deter squirrels, ensuring that the feeder remains exclusively accessible to birds."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Overlay Text Box"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="custom-section">
+  <div class="container">
+    <!-- 图片 -->
+    <div class="image-wrapper">
+      {% if section.settings.image %}
+        {{ section.settings.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'main-image' }}
+      {% endif %}
+    </div>
+
+    <!-- 标题块 -->
+    <div class="title-container">
+      <div class="title-content">
+        <h2 class="background-title">{{ section.settings.background_text }}</h2>
+        <div class="foreground-title">
+          <h2>{{ section.settings.title_line1 }}</h2>
+          <h2>{{ section.settings.title_line2 }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- 文本框 -->
+    <div class="text-box">
+      <div class="quote-box">
+        <p class="quote">“{{ section.settings.quote_text }}”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.custom-section {
+  background-color: #f9f5ec;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 图片 */
+.image-wrapper {
+  position: absolute;
+  left: 20%;
+  top: 45%; /* ✅ 往上挪动，底部露出背景 */
+  transform: translateY(-50%) translateX(-10%);
+  z-index: 2;
+}
+.main-image {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 标题区域 */
+.title-container {
+  position: relative;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+  padding-left: 650px; /* ✅ 和文本对齐 */
+}
+.title-content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  max-width: 600px;
+}
+.background-title {
+  position: absolute;
+  left:-18%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.05);
+  font-weight: 900;
+  z-index: 0;
+  white-space: nowrap;
+}
+.foreground-title {
+  position: relative;
+  z-index: 1;
+}
+.foreground-title h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* 文本框区域 */
+.text-box {
+  background-color: #eee5d3;
+  border-radius: 20px;
+  padding: 60px 40px;
+  padding-left: 650px;
+  position: relative;
+  z-index: 1;
+}
+.quote-box {
+  text-align: left;
+}
+.quote {
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  max-width: 500px;
+}
+.quote::before {
+  content: "“";
+  font-size: 50px;
+  position: absolute;
+  left: -20px;
+  top: -30px;
+  color: #999;
+}
+.quote::after {
+      content: "”";
+    font-size: 50px;
+    position: absolute;
+    right: -25px;
+    bottom: -50px;
+    color: #999;
+}
+
+/* 响应式 */
+@media screen and (max-width: 768px) {
+  .image-wrapper {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .quote::after {
+    right: 0px;
+    bottom: -60px;
+}
+  .main-image {
+    width: 100%;
+  }
+  .text-box {
+    padding: 40px 20px;
+  }
+  .title-container {
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+  .title-content {
+    max-width: 100%;
+  }
+  .background-title {
+    font-size: 40px;
+    left:-20%;
+    transform: translateX(50%) translateY(-50%);
+  }
+  .foreground-title h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+</style>

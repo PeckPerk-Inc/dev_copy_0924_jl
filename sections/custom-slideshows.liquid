@@ -1,0 +1,311 @@
+{% schema %}
+{
+  "name": "Custom Slideshows",
+  "tag": "section",
+  "class": "section custom-slideshow",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "User-Friendly App for Nature Lovers"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "手机部分是视频 + 图片 连同文字为一篇可左右跳转"
+        },
+        {
+          "type": "text",
+          "id": "text_background_color",
+          "label": "Text Background Color",
+          "default": "#ffffff00"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slideshows",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .slides-2{
+    margin-top:30px!important;
+  }
+  #shopify-section-{{ section.id }} .section{
+    padding:0;
+  }
+.custom-slideshow .slideshow-container-2 {
+  width: var(--container-inner-width);
+  margin: 0 auto;
+  padding: var(--section-vertical-spacing, 0px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-2 {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-2 {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 100px;
+  /* min-height: 500px; */
+}
+
+.slide-media-2 {
+  flex: 0 1 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slide-content-2 {
+  width: 100%;
+  display: block;
+}
+
+.slide-text-2 {
+  flex: 0 1 40%;
+  padding:30px;
+  border-radius: 8px;
+  display: grid;
+    gap: 0px;
+}
+
+.slide-text-2 h2 {
+  font-size: 2.2rem;
+  line-height:1.2;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.slide-text-2 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 导航按钮 */
+.slide-nav-2 {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+  padding: 8px;
+  border-radius: 30px;
+}
+
+.slide-nav-2 button {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.slide-nav-2 button:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+/* 指示器 */
+.slide-indicators-2 {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot-2 {
+  width: 30px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot-2.active {
+  background: #ffa61a;
+}
+@media (max-width: 768px) {
+  .slide-media-2 {
+  flex: 0 1 auto;
+}
+  .slide-2 {
+    min-height: auto;
+    align-items: stretch;
+  }
+
+  .slide-text-2 {
+    height: auto;
+  }
+}
+/* 移动端样式 */
+@media (max-width: 768px) {
+  .slide-nav-2 {
+    top: 60%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 10px;
+    position: absolute;
+  }
+  .slide-2 {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .slide-media-2,
+  .slide-text-2 {
+    max-width: 100%;
+  }
+
+  .slide-text-2 {
+    order: 2;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .slide-text-2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide-text-2 p {
+    font-size: 1rem;
+  }
+
+  .slide-nav-2 {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .slide-nav-2 button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+{% endstyle %}
+
+<div {% render 'section-properties' %}>
+  <div class="slideshow-container-2 section-stack">
+    <div class="slides-2">
+      {% for block in section.blocks %}
+        <div class="slide-2">
+          <div class="slide-text-2" {% if block.settings.text_background_color %}style="background-color: {{ block.settings.text_background_color }};"{% endif %}>
+            <h2>{{ block.settings.heading }}</h2>
+            <p>{{ block.settings.subheading }}</p>
+          </div>
+          <div class="slide-media-2">
+            {% if block.settings.video_url != blank %}
+              <video class="slide-content-2" autoplay loop muted playsinline>
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+              </video>
+            {% elsif block.settings.image != blank %}
+              <img class="slide-content-2" src="{{ block.settings.image | image_url }}" alt="Slide Image" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="slide-nav-2">
+      <button class="prev-2">&#10094;</button>
+      <button class="next-2">&#10095;</button>
+    </div>
+
+    <div class="slide-indicators-2">
+      {% for block in section.blocks %}
+        <span class="dot-2"></span>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let slideIndex2 = 0;
+  const slides = document.querySelectorAll('.slide-2');
+  const dots = document.querySelectorAll('.dot-2');
+  const totalSlides = slides.length;
+
+  function init() {
+    dots[0].classList.add('active');
+  }
+
+  function showSlide(index) {
+    slideIndex2 = (index + totalSlides) % totalSlides;
+    document.querySelector('.slides-2').style.transform = `translateX(-${slideIndex2 * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[slideIndex2].classList.add('active');
+  }
+
+  document.querySelector('.prev-2').addEventListener('click', () => showSlide(slideIndex2 - 1));
+  document.querySelector('.next-2').addEventListener('click', () => showSlide(slideIndex2 + 1));
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
+
+  let touchStartX = 0;
+  const slider = document.querySelector('.slides-2');
+
+  slider.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', e => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? showSlide(slideIndex2 + 1) : showSlide(slideIndex2 - 1);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    document.querySelector('.slides-2').style.transform = `translateX(-${slideIndex2 * 100}%)`;
+  });
+
+  init();
+});
+</script>

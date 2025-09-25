@@ -1,0 +1,408 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h4"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "collapse_content": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "badges",
+        "price",
+        "rating",
+        "payment_terms",
+        "separator",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "image_with_text_overlay_wgC3Wf": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "button_K6AVrH": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "base",
+            "text": "Shop Now",
+            "url": "shopify://products/scarf-in-a-gift-box",
+            "background": "#81b4ea",
+            "text_color": "#81b4ea"
+          }
+        }
+      },
+      "block_order": [
+        "button_K6AVrH"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/6_f8ed7f22-fc10-4547-a5d8-416380eab685.jpg",
+        "mobile_image": "shopify://shop_images/6_31c80560-cafb-4d9e-bed3-dea250b4a778.jpg",
+        "mobile_text_position": "place-self-end-center text-center",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 0
+      }
+    },
+    "rich_text_MwErXp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7fmJEn": {
+          "type": "heading",
+          "settings": {
+            "text": "The World's First Wildlife Landscape Smart Telephoto Camera",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": "",
+            "css": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_7fmJEn"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "video_nMniMX": {
+      "type": "video",
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "autoplay": true,
+        "video_size": "auto",
+        "video": "shopify://files/videos/长焦相机.MP4",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "custom_tabs_3fMTnm": {
+      "type": "custom-tabs",
+      "custom_css": [
+        ".section-stack {padding-top: 60px !important;}",
+        ".tab4_right_text {transform: translateX(-64px);}",
+        "@media screen and (max-width: 700px) {.tab4_right_text {transform: translateX(0px); }}",
+        ".tab1_center_image_top {width: 100%; height: 80% !important; object-fit: contain;}",
+        ".tab3_contant .image_two_container {height: 160px;}",
+        "@media screen and (max-width: 749px) {.tabs-container {padding-top: 0px !important; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_size": "small",
+        "subheading": "",
+        "title": "",
+        "text_alignment": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "tab_title": "Easy Carry",
+        "tab_image": "shopify://shop_images/1_5_347e0db0-003d-4eab-826e-2171669da43d.jpg",
+        "tab_image2": "shopify://shop_images/3_9_c222bbe7-ea3c-4d41-8a44-2dc454585ebf.jpg",
+        "tab_image3": "shopify://shop_images/4_7_4840ff8e-0539-410e-b5d1-9ffb98266e25.jpg",
+        "tab_content": "<p><strong>Compact, Adventure-Ready </strong></p><p><strong>Camera</strong></p><p>Lightweight for easy packing/carrying, yet packs a powerful telephoto punch for any journey.</p>",
+        "tab2_title": "Versatile Modes",
+        "tab2_image": "shopify://shop_images/1_4_14f25897-4f04-4507-98c5-776952d03b71.jpg",
+        "tab2_image2": "shopify://shop_images/3_8.jpg",
+        "tab2_image3": "shopify://shop_images/4_8.jpg",
+        "tab2_content": "<p><strong>Versatile Modes + HDR</strong></p><p>Six specialized scene presets deliver balanced exposure, crisp detail, and vibrant contrast in every environment.</p>",
+        "tab3_title": "Smart Sync",
+        "tab3_image": "shopify://shop_images/1_3_06a2ec7d-22fe-40c2-bbfd-7a6641a8f5e7.jpg",
+        "tab3_image2": "shopify://shop_images/3_7.jpg",
+        "tab3_content": "<p><strong>App-Connected Workflow</strong></p><p>Check battery life, manage settings, and share your shots with a single tap. Transfer, manage & post pro shots direct from you phone.</p>",
+        "tab4_title": "Sony Clarity",
+        "tab4_image": "shopify://shop_images/1_2_22625dce-edd8-41d4-8012-a65b12ec4b41.jpg",
+        "tab4_image2": "shopify://shop_images/3_6.jpg",
+        "tab4_image3": "shopify://shop_images/4_6.jpg",
+        "tab4_content": "<p><strong>Pro-Grade 48MP Sony Sensor</strong></p><p>Capture true-to-life colors and stunning detail from close-up wildlife portraits to sweeping landscapes.</p>",
+        "tab5_title": "AI Vision",
+        "tab5_image": "shopify://shop_images/1_735c9b31-8f01-4d61-8c3d-23602add9586.jpg",
+        "tab5_image2": "shopify://shop_images/3_4_0a7902ad-fdad-41c7-9202-98133957d7d9.jpg",
+        "tab5_image3": "shopify://shop_images/4_4_2878e0ac-278b-46d2-a5e0-58e787112038.jpg",
+        "tab5_content": "<p><strong>AI Wildlife Recognition</strong></p><p>AI-enhanced image processing & species recognition. Identify every animal species on the spot.</p>"
+      }
+    },
+    "rich_text_weEpKA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UjXKnC": {
+          "type": "heading",
+          "settings": {
+            "text": "Design Details",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": "",
+            "css": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UjXKnC"
+      ],
+      "custom_css": [
+        ".rich-text {padding-top: 120px !important;}",
+        "@media screen and (max-width: 749px) {.rich-text {padding-top: 18px !important; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "image_link_blocks_6DDcqj": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "item_9eHN7X": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_15_fc874a84-2c76-4429-8e70-b201eff5e0cc.jpg",
+            "stretch_image": true,
+            "link_text": "Bottom screw hole",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_eDQwUB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_16_bd7ebe1e-0711-422e-a077-8bf43aa9f66c.jpg",
+            "stretch_image": true,
+            "link_text": "Clear indicator light",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_MEhqyi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_17_cdd94192-b688-43e9-bb01-904bd451e916.jpg",
+            "stretch_image": true,
+            "link_text": "Ergonomics grip design",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_hR8zPz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_18.jpg",
+            "stretch_image": true,
+            "link_text": "Real-time battery status display",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "item_9eHN7X",
+        "item_eDQwUB",
+        "item_MEhqyi",
+        "item_hR8zPz"
+      ],
+      "name": "Image link blocks",
+      "settings": {
+        "full_width": false,
+        "block_size": "medium",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "tabs_JnFHU9": {
+      "type": "tabs",
+      "blocks": {
+        "tab_7PVLMg": {
+          "type": "tab",
+          "settings": {
+            "title": "How to choose",
+            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "page": "dt1b"
+          }
+        }
+      },
+      "block_order": [
+        "tab_7PVLMg"
+      ],
+      "custom_css": [
+        ".section-stack {padding-top: 240px !important;}",
+        "@media screen and (max-width: 749px) {.section-stack {padding-top: 20px !important; }}"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "",
+        "title": "Product Specification",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "1744710799d18b717e": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "1744715960e98d65ce": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_wgC3Wf",
+    "rich_text_MwErXp",
+    "video_nMniMX",
+    "custom_tabs_3fMTnm",
+    "rich_text_weEpKA",
+    "image_link_blocks_6DDcqj",
+    "tabs_JnFHU9",
+    "1744710799d18b717e",
+    "1744715960e98d65ce"
+  ]
+}

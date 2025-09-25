@@ -1,0 +1,266 @@
+{% schema %}
+{
+  "name": "主题展示区块",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_line1",
+      "label": "标题首行",
+      "default": "Wildlife Watching"
+    },
+    {
+      "type": "text",
+      "id": "title_line2",
+      "label": "标题次行",
+      "default": "Unforgettable Discovering"
+    },
+    {
+      "type": "color",
+      "id": "color_1",
+      "label": "颜色按钮 1",
+      "default": "#3A5A40"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "对应图片 1"
+    },
+    {
+      "type": "color",
+      "id": "color_2",
+      "label": "颜色按钮 2",
+      "default": "#344E41"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "对应图片 2"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "背景视频"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "按钮文字",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "按钮链接"
+    }
+  ],
+  "presets": [
+    {
+      "name": "自然主题展示区块",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .media-container{
+    height:500px;
+  }
+  .hero-section {
+    display: flex;
+    min-height: 80vh;
+    padding: 4% 8%;
+    align-items: center;
+    gap: 5%;
+    flex-direction: row-reverse;
+  }
+
+  .content-column {
+    flex: 1;
+    z-index: 2;
+    max-width: 45%;
+  }
+
+  .title-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .main-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: #2F3E46;
+  }
+
+  .color-swatches {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .color-swatch {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .color-swatch.active {
+    border-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .media-column {
+    flex: 1;
+    position: relative;
+    max-width: 50%;
+  }
+
+  .media-container {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .main-media {
+    width: 100%;
+    height: auto;
+    display: block !important;
+  }
+
+  .color-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    padding: 1rem 2.5rem;
+    background: #2F3E46;
+    color: white !important;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .media-column{
+      margin-bottom:10px;
+    }
+    .hero-section {
+      flex-direction: column;
+      padding: 15% 5%;
+    }
+    
+    .content-column,
+    .media-column {
+      max-width: 100%;
+      width: 100%;
+    }
+    .media-container{
+      height:400px;
+    }
+    .main-title {
+      font-size: 2.2rem;
+    }
+  }
+  
+</style>
+
+<div class="hero-section">
+  <div class="media-column">
+    <div class="media-container">
+      {% if section.settings.video %}
+        <video class="main-media" autoplay muted loop playsinline>
+          <source src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
+        </video>
+      {% endif %}
+
+      {% if section.settings.image_1 %}
+        <img src="{{ section.settings.image_1 | image_url }}" 
+             class="color-image"
+             loading="lazy"
+             alt="Color variation 1"
+             style="display: none;">
+      {% endif %}
+
+      {% if section.settings.image_2 %}
+        <img src="{{ section.settings.image_2 | image_url }}" 
+             class="color-image"
+             loading="lazy"
+             alt="Color variation 2"
+             style="display: none;">
+      {% endif %}
+    </div>
+  </div>
+  <div class="content-column">
+    <div class="title-wrapper">
+      <h1 class="main-title">
+        {{ section.settings.title_line1 }}<br>
+        {{ section.settings.title_line2 }}
+      </h1>
+    </div>
+
+    <div class="color-swatches">
+      <div class="color-swatch" 
+           style="background: {{ section.settings.color_1 }}"
+           data-image="{{ section.settings.image_1 | image_url }}"></div>
+      <div class="color-swatch" 
+           style="background: {{ section.settings.color_2 }}"
+           data-image="{{ section.settings.image_2 | image_url }}"></div>
+    </div>
+
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_link }}" class="cta-button">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const swatches = document.querySelectorAll('.color-swatch');
+  const mediaContainer = document.querySelector('.media-container');
+  const videoWrapper = mediaContainer.querySelector('video'); // 精确锁定视频元素
+  const colorImages = mediaContainer.querySelectorAll('.color-image');
+
+  // 初始状态设置
+  let isVideoActive = true;
+  
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', function() {
+      // 切换激活状态
+      swatches.forEach(s => s.classList.remove('active'));
+      this.classList.add('active');
+      
+      // 当首次切换时处理视频
+      if(isVideoActive) {
+        // 暂停并移除视频
+        videoWrapper.pause();
+        videoWrapper.remove();
+        isVideoActive = false;
+        
+        // 显示所有备用图片容器
+        colorImages.forEach(img => img.style.display = 'block');
+      }
+
+      // 切换对应图片
+      const targetImage = mediaContainer.querySelector(`img[src="${this.dataset.image}"]`);
+      colorImages.forEach(img => {
+        img.style.opacity = img === targetImage ? '1' : '0';
+      });
+    });
+  });
+});
+</script>

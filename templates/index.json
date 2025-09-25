@@ -1,0 +1,830 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_PyKHpL": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "button_qHQgzt": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "lg",
+            "text": "Shop Now",
+            "url": "shopify://products/peckperk-smart-bird-feeder",
+            "background": "#ffffff",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_qHQgzt"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/5_5e25f2f0-f9f5-4f3e-8f9e-b665e4d601a3.jpg",
+        "mobile_image": "shopify://shop_images/5_25ebb50b-2740-488e-aa2f-1a307161d898.jpg",
+        "mobile_text_position": "place-self-end-center text-center",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "image_with_text_overlay_B64NC6": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "button_jnL4yM": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "sm",
+            "text": "Shop Now",
+            "url": "shopify://pages/promotion",
+            "background": "#ffffff",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_jnL4yM"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/99_3901f007-5656-47d8-9a30-a14c2105946e.jpg",
+        "mobile_image": "shopify://shop_images/1_5f1438e4-c596-49d8-8360-a48285856ed6.jpg",
+        "mobile_text_position": "place-self-end-center text-center",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "video_fYqYhR": {
+      "type": "video",
+      "blocks": {
+        "heading_r3LAUj": {
+          "type": "heading",
+          "settings": {
+            "text": "Experience Nature Like Never Before",
+            "heading_tag": "h0"
+          }
+        },
+        "button_x7iFDy": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "lg",
+            "text": "Shop Now",
+            "url": "https://www.peckperk.com/collections/smart-bird-feeder",
+            "background": "",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_r3LAUj",
+        "button_x7iFDy"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": true,
+        "video_size": "lg",
+        "video": "shopify://files/videos/落地页广告 1_27b12856-c8fc-4008-bbea-dfe7d3263bb7.mp4",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "custom_collection_list_qirPCH": {
+      "type": "custom-collection-list",
+      "blocks": {
+        "collection_Pexw6V": {
+          "type": "collection",
+          "settings": {
+            "collection": "smart-bird-feeder-1",
+            "image": "shopify://shop_images/22.png",
+            "subheading": "Smart Bird Feeder",
+            "title": "",
+            "url": "shopify://products/peckperk-smart-bird-feeder",
+            "button_text": "Shop Now",
+            "heading_tag": "h4",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_4z9zGB": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/2_951be91e-6a1b-40d7-9ba2-cb5f6d46f823.png",
+            "subheading": "Smart Bird Feeder Mini",
+            "title": "",
+            "url": "shopify://products/peckperk-smart-bird-feeder-mini",
+            "button_text": "Shop Now",
+            "heading_tag": "h1",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_AMchxw": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/2_2_5e858aac-93c4-440f-a298-fa90aa7a6a0a.png",
+            "subheading": "Telephoto Camera",
+            "title": "",
+            "url": "shopify://products/peckperk-smart-telephoto-camera",
+            "button_text": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_Pexw6V",
+        "collection_4z9zGB",
+        "collection_AMchxw"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "1",
+        "collections_per_row": 3,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "#1a1a1a",
+        "heading_color": "#1a1a1a",
+        "heading_gradient": ""
+      }
+    },
+    "rich_text_QLjghy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ULwk3N": {
+          "type": "heading",
+          "settings": {
+            "text": "Wildlife Watching, Unforgettable Discovering",
+            "heading_tag": "h2",
+            "text_color": "#000000",
+            "gradient": "",
+            "css": ""
+          }
+        },
+        "heading_x6M7h6": {
+          "type": "heading",
+          "settings": {
+            "text": "Explore nature | Care for wildlife | Orient to human",
+            "heading_tag": "h5",
+            "text_color": "#1a1a1a",
+            "gradient": "",
+            "css": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_ULwk3N",
+        "heading_x6M7h6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_slideshow_gxH7UK": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_9tpL6w": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/adorable-kookaburra-on-balcony-railing.webp",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/46eb83f438174206864202793ec3856d.mp4",
+            "heading": "Smart Notification",
+            "subheading": "Never miss a chirp, a wink, or that cheeky moment again! Our smart feeder recognizes over 11,000 bird species and sends instant updates straight to your phone!"
+          }
+        },
+        "slide_waUTwP": {
+          "type": "slide",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/475b43ecb57b4095a9462f4e924fcdbb.mp4",
+            "heading": "Color Night Vision",
+            "subheading": "Lights out, feasts go on. Watch your backyard come alive in full-color night vision, and get ready for a nocturnal spectacle like never before!"
+          }
+        },
+        "slide_hMR6Qj": {
+          "type": "slide",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/407519eab9f5429aa21bebcbb984bce0.mp4",
+            "heading": "Device Share",
+            "subheading": "Gather your family and friends to witness nature’s live show! With our smart bird feeder, every chirp and flutter is just a tap away."
+          }
+        }
+      },
+      "block_order": [
+        "slide_9tpL6w",
+        "slide_waUTwP",
+        "slide_hMR6Qj"
+      ],
+      "custom_css": [],
+      "settings": {}
+    },
+    "custom_logo_list_QmdUhG": {
+      "type": "custom-logo-list",
+      "blocks": {
+        "logo_7Awff6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/7_5b5695ea-47b2-4200-a731-2d845d2cd3fe.png",
+            "logo_width": 140,
+            "link": "https://apps.apple.com/ca/app/peckperk/id6475035725"
+          }
+        },
+        "logo_c3mBWy": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/8_c753dba1-64cb-495c-8df2-ed6aab12ea85.png",
+            "logo_width": 140,
+            "link": "https://play.google.com/store/apps/details?id=com.prerule.peckperk&pcampaignid&pli=1"
+          }
+        },
+        "logo_rxW3mQ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/9_96af1166-5993-4851-8971-62183b215847.png",
+            "logo_width": 140,
+            "link": "https://peckperk-release.s3.us-east-2.amazonaws.com/app/latest.apk"
+          }
+        }
+      },
+      "block_order": [
+        "logo_7Awff6",
+        "logo_c3mBWy",
+        "logo_rxW3mQ"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "custom_image_list_UAJ77Y": {
+      "type": "custom-Image-list",
+      "blocks": {
+        "collection_3m3Nzt": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/WechatIMG598.jpg",
+            "subheading": "",
+            "title": "Outdoor Exploration",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3KLjWL": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/PeckPerk-Carrie-Waller-10.jpg",
+            "subheading": "",
+            "title": "Backyard Sanctuary",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_xJQEcr": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/WechatIMG597.jpg",
+            "subheading": "",
+            "title": "Share the Love",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_3m3Nzt",
+        "collection_3KLjWL",
+        "collection_xJQEcr"
+      ],
+      "custom_css": [
+        ".content-over-media {border-radius: 20px !important;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "1",
+        "collections_per_row": 3,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "rich_text_Upxjr4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mgtDEg": {
+          "type": "heading",
+          "settings": {
+            "text": "Nature Uncaged",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": "",
+            "css": ""
+          }
+        },
+        "divider_YWVM7G": {
+          "type": "divider",
+          "settings": {}
+        },
+        "richtext_VejDp4": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h6><em>Experience wildlife in its purest form — where every detail dazzles and every shared moment brings you closer to the wild you love. </em></h6>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mgtDEg",
+        "divider_YWVM7G",
+        "richtext_VejDp4"
+      ],
+      "custom_css": [
+        ".rich-text .prose,.split-rich-text .prose {justify-content: space-between;}",
+        ".title {margin-top: -10px;}",
+        "@media (max-width: 768px) {.prose {justify-items: center; } p {text-align: center; }}",
+        "@media screen and (max-width: 749px) {.section-blends {margin-top: 15px !important; margin-bottom: 15px !important; } .text-start {text-align: center !important; }}",
+        ".section-blends {margin-top: 80px;}",
+        ".section-full {margin-bottom: 50px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_pic_collection_3XQzWi": {
+      "type": "custom-pic-collection",
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.collage-section {margin-bottom: 30px !important; }}",
+        ".collage-section {margin-bottom: 60px; margin-top: 10px;}"
+      ],
+      "settings": {
+        "video_file": "shopify://files/videos/1.mp4",
+        "desktop_top_1": "shopify://shop_images/40.jpg",
+        "desktop_top_2": "shopify://shop_images/43.jpg",
+        "desktop_top_3": "shopify://shop_images/42.jpg",
+        "desktop_top_4": "shopify://shop_images/41.jpg",
+        "desktop_top_5": "shopify://shop_images/44_6de6ffa4-e55f-42a2-b741-3a2d8891473b.jpg",
+        "desktop_center_1": "shopify://shop_images/77.jpg",
+        "desktop_center_2": "shopify://shop_images/2024-11-20T11-50-54Z.thumbnail_a6ec77e4-bf6b-4f0d-b697-a7f21003f8c9.jpg",
+        "desktop_center_4": "shopify://shop_images/47.jpg",
+        "desktop_center_5": "shopify://shop_images/46.jpg",
+        "desktop_bottom_1": "shopify://shop_images/70.jpg",
+        "desktop_bottom_2": "shopify://shop_images/45.jpg",
+        "desktop_bottom_3": "shopify://shop_images/48.jpg",
+        "desktop_bottom_4": "shopify://shop_images/68.jpg",
+        "desktop_bottom_5": "shopify://shop_images/49.jpg"
+      }
+    },
+    "custom_reviews_7Lf6VL": {
+      "type": "custom-reviews",
+      "blocks": {
+        "testimonial_6mBVRC": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Karly Gable",
+            "reviews_image": "shopify://shop_images/camelliagagepoultry_-1.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Backyard peace keeper",
+            "title": "",
+            "content": "<p><a href=\"https://www.instagram.com/p/DDImnC6uZ8C/\" target=\"_blank\" title=\"https://www.instagram.com/p/DDImnC6uZ8C/\">I'm completely obsessed with watching all the adorable birdies while keeping an eye on my entire backyard at the same time. It even helps me monitor my chickens and spot any unexpected visitors!</a></p>"
+          }
+        },
+        "testimonial_gxADAK": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Jordan Rowley",
+            "reviews_image": "shopify://shop_images/20250411195653.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Solid connection",
+            "title": "",
+            "content": "<p><a href=\"https://www.youtube.com/watch?v=n3ubFhPA6rc\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=n3ubFhPA6rc\">The feeder maintains a solid connection to my 2.4G Wi-Fi network, even at the far end of my yard. I haven't experienced any dropouts or lag in the live video stream.</a></p>"
+          }
+        },
+        "testimonial_hye9nt": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Dilem Dogan",
+            "reviews_image": "shopify://shop_images/eliz.life.style_-_1.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Natural beauty",
+            "title": "",
+            "content": "<p><a href=\"https://www.instagram.com/p/DDa40lLu7QE/\" target=\"_blank\" title=\"https://www.instagram.com/p/DDa40lLu7QE/\">Waking up to birds visiting the feeder is pure joy. It’s peaceful, beautiful, and reminds me to slow down and enjoy the little things.</a></p>"
+          }
+        },
+        "testimonial_dqb84D": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Backyard Biology Boys",
+            "reviews_image": "shopify://shop_images/515.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Smooth and simple",
+            "title": "",
+            "content": "<p><a href=\"https://www.youtube.com/watch?v=xxDg050IfBc\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=xxDg050IfBc\">Loved how simple it was to fill the feeder and set everything up. The attachment options worked perfectly for me, honestly smoother than I expected. Great experience so far!</a></p>"
+          }
+        },
+        "testimonial_QzCdLR": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Matt Thompson",
+            "reviews_image": "shopify://shop_images/517.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Sleek design",
+            "title": "",
+            "content": "<p><a href=\"https://www.tiktok.com/@modernhomestead/video/7348067999317789958\" target=\"_blank\" title=\"https://www.tiktok.com/@modernhomestead/video/7348067999317789958\">So, l recently got my hands on the Peckperk Smart A.l. Bird Feeder, and l gotta say, it's pretty neat! Setting it up was a breeze and its sleek design fits right in with my backyard vibe.</a></p>"
+          }
+        },
+        "testimonial_jcpEzc": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Shayna Cossette",
+            "reviews_image": "shopify://shop_images/516.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Handles extreme cold",
+            "title": "",
+            "content": "<p><a href=\"https://www.youtube.com/watch?v=NkA4kMe8DcY\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=NkA4kMe8DcY\">Really impressed the feeder kept working consistantly in up to -30°C with the solar panel! Only needed to bring it inside once at -32°C, great for colder climates!</a></p>"
+          }
+        },
+        "testimonial_36Jmch": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Christopher",
+            "reviews_image": "shopify://shop_images/518.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "HD video",
+            "title": "",
+            "content": "<p><a href=\"https://www.instagram.com/reel/C4Wu821xBQN\" target=\"_blank\" title=\"https://www.instagram.com/reel/C4Wu821xBQN\">The main reason I purchased the PeckPerk smart bird feeder is because of its HD camera and smart sensors, which enable me to clearly enjoy the activities of the birds.</a><br/></p>"
+          }
+        },
+        "testimonial_4XTr3f": {
+          "type": "testimonial",
+          "settings": {
+            "product_name": "Char and Marv",
+            "reviews_image": "shopify://shop_images/519.jpg",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Easy to install",
+            "title": "",
+            "content": "<p><a href=\"https://www.instagram.com/p/C6P0EZPt5Or/\" target=\"_blank\" title=\"https://www.instagram.com/p/C6P0EZPt5Or/\">The PeckPerk Smart Bird Feeder Is super easy to install and use. Even beginners can get started in no time! The app interface allows me to monitor my yard from anywhere, anytime!</a><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_6mBVRC",
+        "testimonial_gxADAK",
+        "testimonial_hye9nt",
+        "testimonial_dqb84D",
+        "testimonial_QzCdLR",
+        "testimonial_jcpEzc",
+        "testimonial_36Jmch",
+        "testimonial_4XTr3f"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.section-stack {margin-bottom: 50px; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "From Our Customers",
+        "content": "",
+        "link_url": "https://www.peckperk.com/products/peckperk-squirrel-proof-smart-bird-feeder-basic-model",
+        "link_text": "",
+        "background": "#f8f5eb",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "#fcfaf4",
+        "testimonial_card_text_color": "#000000"
+      }
+    },
+    "logo_list_4QTwpq": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_txdber": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/7_9b3e8974-2a01-4a13-8ea9-04adcc66e14a.png",
+            "logo_width": 250,
+            "link": "https://techigar.com/peckperk-smart-bird-feeder-feed-id-and-watch-the-birds-all-the-birds"
+          }
+        },
+        "logo_8AgLK9": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/3_e148035d-ea0b-46ee-abc4-358514c1c735.png",
+            "logo_width": 250,
+            "link": "https://www.yahoo.com/lifestyle/creative-gifts-fresh-finds-spring-152918516.html"
+          }
+        },
+        "logo_yg3xYh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/8_2610167b-013f-474c-bed9-068b83e9efd9.png",
+            "logo_width": 250,
+            "link": "https://www.techradar.com/cameras/peckperk-smart-bird-feeder-camera-review"
+          }
+        },
+        "logo_GpqBJm": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/9_f8e28618-10ac-4d89-a166-572df448ccb1.png",
+            "logo_width": 250,
+            "link": "https://the-gadgeteer.com/2025/05/05/peckperk-bird-feeder-review-a-great-way-to-birdwatch-from-afar/"
+          }
+        },
+        "logo_8EXTHe": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/6_3acb4a61-acd5-45ab-8c3f-cee7c234c0cf.png",
+            "logo_width": 250,
+            "link": "https://www.moneymagpie.com/save-money/wedding-gifts-for-every-budget"
+          }
+        },
+        "logo_t7V46r": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/2_2cee10ba-eb28-4548-9e1f-45c5b2a2c832.png",
+            "logo_width": 250,
+            "link": "https://apnews.com/press-release/pr-newswire/cameras-environmental-conservation-5b569ddf4407c3d5b991f02000e83d43"
+          }
+        }
+      },
+      "block_order": [
+        "logo_txdber",
+        "logo_8AgLK9",
+        "logo_yg3xYh",
+        "logo_GpqBJm",
+        "logo_8EXTHe",
+        "logo_t7V46r"
+      ],
+      "custom_css": [
+        ".section-stack {margin-top: 30px;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_mobile": true,
+        "title": "As Featured In",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "faq_XMyArB": {
+      "type": "faq",
+      "blocks": {
+        "item_9EJqhP": {
+          "type": "item",
+          "settings": {
+            "title": "VIP Code Activation",
+            "content": "<p>For VIP code activation, please click home-your device-gear icon for camera settings-advanced features-VIP expiration date and enter your code to activate.</p>"
+          }
+        },
+        "item_LCJ4nz": {
+          "type": "item",
+          "settings": {
+            "title": "Device Sharing",
+            "content": "<p>To share the feeder with your friends,Open the app and go to Home-Select your Device-Click on the gear icon for Camera Settings-Scroll down and find Share - Device Sharing-You will see a QR code there. Ask the person you want to share with to scan this code.<br/>Once they scan and add the device, And please grant permission at the same page.</p>"
+          }
+        },
+        "item_aLxiaq": {
+          "type": "item",
+          "settings": {
+            "title": "WiFi Connection",
+            "content": "<h5>Why Does PeckPerk Only Support 2.4GHz WiFi?</h5><p>PeckPerk smart bird feeder <strong>only supports 2.4GHz WiFi</strong> for the following reasons:</p><p><strong>Better Signal Coverage</strong></p><p>2.4GHz WiFi has a longer wavelength, which provides stronger wall penetration and is more suitable for outdoor environments.</p><p>5GHz WiFi operates at a higher frequency, leading to faster signal attenuation and reduced coverage range, making it less ideal for long-distance device connections.<br/><br/><strong>Better Device Compatibility</strong></p><p>The 2.4GHz band is the standard for IoT (Internet of Things) devices, ensuring greater compatibility with smart home products.</p><p>Many smart home devices only support 2.4GHz to minimize interference with 5GHz networks.</p><p><strong>Lower Power Consumption</strong></p><p>5GHz WiFi provides faster speeds but consumes more power, while 2.4GHz WiFi is more energy-efficient, making it better suited for continuous-operation smart devices.<br/><br/><strong>What If My WiFi Is Dual-Band (2.4GHz + 5GHz)?</strong></p><p>Some routers enable <strong>Dual Band Steering</strong>, meaning both 2.4GHz and 5GHz share the same WiFi name (SSID), which may cause connection issues for PeckPerk.</p><p>✅ <strong>Solutions:</strong><br/><br/>Wireless Settings / WiFi Settings2.4GHz and 5GHz networks (e.g., MyWiFi-2.4G and MyWiFi-5G).<br/>2.4GHz WiFi and ensure your phone is on the same network during setup.<br/><br/>turn off the 5GHz band<br/>Once PeckPerk is connected, you can re-enable the 5GHz band.<br/><br/>iPhones typically connect to the strongest signal. Try moving farther from the router to force it onto 2.4GHz.For Android Users: Some Android devices allow manually selecting 2.4GHz under WiFi settings.</p><p><strong>What If My Router Does Not Have 2.4GHz WiFi?</strong></p><p>Some modern WiFi 6 routers <strong>only enable 5GHz by default</strong>, making it impossible to connect PeckPerk.</p><p>✅ <strong>Solutions:</strong><br/><br/>2.4GHz band is turned on<br/>If your router merges both bands under one SSID, rename them separately.<br/><br/>support only 2.4GHz. You can temporarily use one for setup and switch back afterward.Use a mobile hotspot (iPhone or Android):<br/><br/>2.4GHz mode<br/>Connect PeckPerk to the hotspot to complete the initial setup.<br/><br/><strong>does not support 2.4GHz at all</strong>, consider purchasing a <strong>WiFi extender (repeater) or IoT gateway</strong> to convert the 5GHz signal into 2.4GHz.</p>"
+          }
+        },
+        "item_4FRKbL": {
+          "type": "item",
+          "settings": {
+            "title": "How long does it take to receive the product?",
+            "content": "<p><strong>Cheerful Shipping in the USA and Canada:</strong></p><p>If you’re shopping from the USA, shipping is absolutely free! We have local warehouses in both countries, which means we get your orders to you faster. Most packages in the U.S. zip across to you within 5 working days, and we’re quick in Canada too. Sometimes, certain items or colors might not be in stock locally. If we need to ship these from another warehouse, there’s a $50 fee to handle the extra logistics—just so you know!</p><p><strong>Global Shipping for Everyone Else:</strong></p><p>Hello to our friends around the world! If you’re outside the USA and Canada, we’re excited to ship to you too. We offer international shipping to all other countries with a flat rate of $50. We use fast and reliable air freight to ensure that your items arrive on time and in perfect condition, no matter where you are.</p>"
+          }
+        },
+        "item_DbqNL6": {
+          "type": "item",
+          "settings": {
+            "title": "What payment methods do you accept?",
+            "content": "<p>We accept a wide range of payment methods, including major credit cards like Mastercard, Visa, Discover, and American Express, as well as electronic payments such as Diners Club, Elo, JCB, Shop Pay, Apple Pay, Google Pay, and PayPal. Please note that some credit cards may incur transaction fees according to specific bank rules.\"<br/><br/></p>"
+          }
+        },
+        "item_TyCDCn": {
+          "type": "item",
+          "settings": {
+            "title": "How to activate the Squirrel Repelling and format the SD Card?",
+            "content": "<p>Please follow these steps:<br/></p><ol><li>Go to 'Home' on the app.<br/></li><li>Select the gear icon under your device to enter camera settings.<br/></li><li>Activate 'Squirrels Repelling' at Advanced Features or Format SD card at SD Card Management.</li></ol><p>Click <a href=\"https://www.youtube.com/watch?v=lzQ-KvnkKkU&list=PLUs5naiYUWuv0BHoHKKB2aVmRlrptOixs&index=4\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=lzQ-KvnkKkU&list=PLUs5naiYUWuv0BHoHKKB2aVmRlrptOixs&index=4\">here</a> to watch the video.</p>"
+          }
+        },
+        "item_p6cDHy": {
+          "type": "item",
+          "settings": {
+            "title": "How to connect the device?",
+            "content": "<p>Please double-check the user manual included in your package for connection instructions. If you're still having trouble, you can also refer to our step-by-step video guide here: https://youtube.com/playlist?list=PLUs5naiYUWuv0BHoHKKB2aVmRlrptOixs&si=glMAthESnBcaCL_C<br/>If the issue continues, please let us know:Your feeder model & phone brand model.</p>"
+          }
+        },
+        "item_7Nmdin": {
+          "type": "item",
+          "settings": {
+            "title": "Encountering issues with your PeckPerk smart bird feeder?",
+            "content": "<p>Before troubleshooting, please check the <strong>user manual</strong> included in your PeckPerk package — it contains helpful setup and troubleshooting guidance.</p><p>Still need help? We recommend watching our latest <strong>video tutorials</strong> here:<br/><br/>🎥 <a href=\"https://youtube.com/playlist?list=PLUs5naiYUWuv0BHoHKKB2aVmRlrptOixs&si=dDxd8HcRNTnh9s9u\">PeckPerk User Tutorials – YouTube Playlist</a></p><p>If your issue persists after checking the manual and videos, feel free to reach out to us through any of the following channels:</p><p><strong>PeckPerk APP</strong> → tap <strong>“Support”</strong> in the “Me” section<br/><strong>Live Chat </strong>on our <a href=\"https://www.peckperk.com\">official website</a><br/><strong>Social Media </strong>comments or messages  (Instagram/Facebook)<br/><strong>Facebook Group</strong> for PeckPerk users<br/>Or simply email us at support@peckperk.com<br/></p><p>We're here to help and typically respond within a few hours — including weekends (within 1 business day)!</p>"
+          }
+        },
+        "item_pT6wTC": {
+          "type": "item",
+          "settings": {
+            "title": "What should l do if the product is damaged?",
+            "content": "<p>If it's still under warranty, please reach out to us at <a>support@peckperk.com</a> with a description of the issue.<br/>Photos or videos are helpful for faster resolution. Our team will respond quickly to make it right!<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_9EJqhP",
+        "item_LCJ4nz",
+        "item_aLxiaq",
+        "item_4FRKbL",
+        "item_DbqNL6",
+        "item_TyCDCn",
+        "item_p6cDHy",
+        "item_7Nmdin",
+        "item_pT6wTC"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 1024px) {.section-stack__intro {width: 30% !important; } .section-stack__main {width: 70% !important; }}",
+        ".section-stack {margin-top: 30px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<h6><em>Contact our support team if you cannot find the answer to your problem: support@peckperk.com.</em></h6>",
+        "team_avatar_width": 50,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
+    "slideshow_PqpPDC": {
+      "type": "slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "slideshow_DMfqpU": {
+      "type": "slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "sm",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_PyKHpL",
+    "image_with_text_overlay_B64NC6",
+    "video_fYqYhR",
+    "custom_collection_list_qirPCH",
+    "rich_text_QLjghy",
+    "custom_slideshow_gxH7UK",
+    "custom_logo_list_QmdUhG",
+    "custom_image_list_UAJ77Y",
+    "rich_text_Upxjr4",
+    "custom_pic_collection_3XQzWi",
+    "custom_reviews_7Lf6VL",
+    "logo_list_4QTwpq",
+    "faq_XMyArB",
+    "slideshow_PqpPDC",
+    "slideshow_DMfqpU"
+  ]
+}

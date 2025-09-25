@@ -1,0 +1,393 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "slideshow_E7j3yF": {
+      "type": "slideshow",
+      "blocks": {
+        "image_LatdjP": {
+          "type": "image",
+          "settings": {
+            "mobile_text_position2": "place-self-start-end text-end",
+            "desktop_text_position2": "sm:place-self-center-end sm:text-end",
+            "transparent_frame1_show": true,
+            "sun_title": "",
+            "sun_content": "Discover a new way to connect with the wild—transform your outdoor space into a living canvas of nature and innovation.",
+            "transparent_frame2_show": true,
+            "sun_title2": "",
+            "sun_content2": "At PeckPerk, we blend cutting-edge technology with nature’s inspiration to bring you smart solutions that celebrate wildlife and protect our environment.",
+            "sun_title_tag": "h6",
+            "image": "shopify://shop_images/10_fea68062-496c-4107-99d2-45a5d21dc93d.jpg",
+            "mobile_image": "shopify://shop_images/52989254295_05e5308791_3k.jpg",
+            "content_max_width": 820,
+            "mobile_text_position": "place-self-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "",
+            "title": "Discover Nature’s Beauty,",
+            "title2": "Embrace a World of Wildlife Wonder",
+            "heading_tag": "h2",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_LatdjP"
+      ],
+      "custom_css": [
+        ".sun_content {font-size: 16px;}",
+        "@media screen and (max-width: 749px) {.h2 {font-size: 19px !important; } .sun_content {font-size: 10px !important; } .slideshow-textbox {padding: 11px !important; } .prose {padding-top: -10px !important; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "rich_text_LzyEzY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QT7RUW": {
+          "type": "heading",
+          "settings": {
+            "text": "Our Commitment to Nature",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": "",
+            "css": ""
+          }
+        },
+        "divider_gdddLT": {
+          "type": "divider",
+          "settings": {}
+        },
+        "richtext_WhtxGd": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h6><em>We believe that every action should contribute to the greater good. That’s why a portion of every PeckPerk purchase is dedicated to wildlife conservation efforts, supporting habitat restoration and ecological repair.</em></h6>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QT7RUW",
+        "divider_gdddLT",
+        "richtext_WhtxGd"
+      ],
+      "custom_css": [
+        ".rich-text .prose,.split-rich-text .prose {justify-content: space-between;}",
+        ".split-rich-text {padding-top: 30px !important;}",
+        ".title {margin-top: -10px;}",
+        "@media (max-width: 768px) {.prose {justify-items: center; } p {text-align: center; } .prose {text-align: center; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_images_and_text_scrolling_xmFbxq": {
+      "type": "custom-Images-and-text-scrolling",
+      "blocks": {
+        "item_cHitFP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/8.jpg",
+            "icon": "none",
+            "icon_width": 60,
+            "title": "Our Story",
+            "content": "<h6><em>PeckPerk was born from a shared passion among nature enthusiasts who believed that technology and the wild should coalesce into a harmonious experience. In the heart of North America, our founders set out on a mission to create products that not only bring nature closer to home but also champion the cause of wildlife conservation. Today, PeckPerk stands as a testament to our commitment to innovation, quality, and the stewardship of nature—creating devices that invite you to witness, explore, and cherish the wonders of the natural world.</em></h6><h6><a href=\"https://youtu.be/AAaUJpqE2Xk\" title=\"About PeckPerk \"><em>Watch the full video</em></a></h6>"
+          }
+        }
+      },
+      "block_order": [
+        "item_cHitFP"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.images-scrolling-desktop__media-wrapper {margin-top: 90px; }}",
+        ".images-scrolling-desktop__media-wrapper img {border-radius: 10px;}",
+        ".images-scrolling-desktop__content-list {align-items: start;}",
+        ".images-scrolling-mobile {grid: unset !important;}",
+        "@media screen and (max-width: 768px) {img {height: 300px; } .prose {text-align: center; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "custom_text_images_section_MNCrmA": {
+      "type": "custom_Text_Images_Section",
+      "custom_css": [
+        ".image-box img {width: 90px; height: 60px;}",
+        ".title {font-size: 60px;}",
+        ".custom-section {padding-left: 30px;}",
+        ".title-left {font-family: \"Arimo\", sans-serif !important; font-weight: 500 !important;}",
+        "@media screen and (max-width: 749px) {.custom-section {margin-bottom: 20px !important; } .title {font-size: 40px; } .images {gap: 44px !important; } .image-box {height: 50px !important; } .custom-section {padding-left: 10px !important; padding-top: 0px !important; padding-bottom: 64px !important; }}"
+      ],
+      "settings": {
+        "heading_1": "",
+        "heading_2": "",
+        "heading_3": "Our Identity",
+        "text": "",
+        "image_1": "shopify://shop_images/13.jpg",
+        "image_1_title": "Discover",
+        "image_2": "shopify://shop_images/14_4dad7789-e2ef-459f-ba2c-54f05a60435a.jpg",
+        "image_2_title": "Enjoy",
+        "image_3": "shopify://shop_images/15.jpg",
+        "image_3_title": "Connect"
+      }
+    },
+    "custom_with_text_overlay_pNejhA": {
+      "type": "custom-with-text-overlay",
+      "blocks": {
+        "heading_UBPKiG": {
+          "type": "heading",
+          "settings": {
+            "text": "Our Vision",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_zfca77": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em>To build a connected platform that unites nature lovers, empowering them to discover the hidden beauties of wildlife while fostering environmental restoration and conservation.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UBPKiG",
+        "richtext_zfca77"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "image": "shopify://shop_images/1d667252bf6e9dbd3f534bfabf0246ec.png",
+        "mobile_image": "shopify://shop_images/65.jpg",
+        "mobile_text_position": "place-self-start text-start",
+        "desktop_text_position": "sm:place-self-end-start sm:text-start",
+        "mobile_text_position2": "place-self-start text-start",
+        "desktop_text_position2": "sm:place-self-center-end sm:text-end",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 29
+      }
+    },
+    "custom_slideshows_CVYqpP": {
+      "type": "custom-slideshows",
+      "blocks": {
+        "slide_7tpML4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_37.jpg",
+            "video_url": "",
+            "heading": "Natural Inspiration",
+            "subheading": "Drawing beauty from the organic forms and shape of the natural world.",
+            "text_background_color": "#3f9193"
+          }
+        },
+        "slide_6dhN6U": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/20140704025003cnHxacnHxa.jpg",
+            "video_url": "",
+            "heading": "User-Centric",
+            "subheading": "Delivering intuitive, reliable, and high-performance products that are accessible to everyone.",
+            "text_background_color": "#3f9193"
+          }
+        }
+      },
+      "block_order": [
+        "slide_7tpML4",
+        "slide_6dhN6U"
+      ],
+      "custom_css": [
+        "p {font-size: 20px; color: #ffffff;}",
+        "h2 {font-size: 30px; color: #ffffff;}",
+        "@media screen and (max-width: 749px) {.Natural Inspiration {margin-top: -50px !important; }}"
+      ],
+      "settings": {}
+    },
+    "logo_list_gj98pd": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_JjMVQg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_1.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_V6cmzF": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_EwBAha": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_kLGfaT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_1.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_JKh3RY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_UEmYXm": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_YtRPwq": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_ahWnyM": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_WcXnQP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/PeckPerk_Logo_2.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_JjMVQg",
+        "logo_V6cmzF",
+        "logo_EwBAha",
+        "logo_kLGfaT",
+        "logo_JKh3RY",
+        "logo_UEmYXm",
+        "logo_YtRPwq",
+        "logo_ahWnyM",
+        "logo_WcXnQP"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "",
+        "content": "",
+        "text_alignment": "start",
+        "items_per_row": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "rich_text_KYCUXA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pQnnzV": {
+          "type": "heading",
+          "settings": {
+            "text": "At PeckPerk, every little peck sparks a powerful perk.",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": "",
+            "css": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_pQnnzV"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_E7j3yF",
+    "rich_text_LzyEzY",
+    "custom_images_and_text_scrolling_xmFbxq",
+    "custom_text_images_section_MNCrmA",
+    "custom_with_text_overlay_pNejhA",
+    "custom_slideshows_CVYqpP",
+    "logo_list_gj98pd",
+    "rich_text_KYCUXA"
+  ]
+}

@@ -1,0 +1,146 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "video_8bRVhL": {
+      "type": "video",
+      "blocks": {
+        "play_rPaFaK": {
+          "type": "play",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "play_rPaFaK"
+      ],
+      "name": "Video",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": true,
+        "video_size": "auto",
+        "video": "shopify://files/videos/迁徙广告 社媒(1).mp4",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "image_with_text_overlay_NdUX6r": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "button_LpmTJB": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "sm",
+            "text": "Shop Now",
+            "url": "shopify://products/peckperk-smart-bird-feeder",
+            "background": "",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_LpmTJB"
+      ],
+      "disabled": true,
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/99_3901f007-5656-47d8-9a30-a14c2105946e.jpg",
+        "mobile_image": "shopify://shop_images/1_5f1438e4-c596-49d8-8360-a48285856ed6.jpg",
+        "mobile_text_position": "place-self-end-center text-center",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#ffb74a",
+        "overlay_opacity": 0
+      }
+    },
+    "featured_collection_cp6t3m": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "smart-bird-feeder",
+        "products": [],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "blog_posts_9cqzmV": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_3exdNk": {
+          "type": "blog",
+          "settings": {
+            "blog": "bird-migration",
+            "posts_count": 3,
+            "stack_items": false
+          }
+        }
+      },
+      "block_order": [
+        "blog_3exdNk"
+      ],
+      "name": "Blog posts",
+      "settings": {
+        "full_width": true,
+        "show_excerpt": false,
+        "show_date": true,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": false,
+        "subheading": "",
+        "title": "About Migration",
+        "content": "",
+        "link_url": "shopify://blogs/bird-migration/bird-migration-when-where-which-and-why-birds-migrate",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_8bRVhL",
+    "image_with_text_overlay_NdUX6r",
+    "featured_collection_cp6t3m",
+    "blog_posts_9cqzmV"
+  ]
+}

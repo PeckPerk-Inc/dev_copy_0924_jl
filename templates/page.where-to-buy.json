@@ -1,0 +1,348 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "image_with_text_overlay_trQ46X": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_F9Rmcj": {
+          "type": "heading",
+          "settings": {
+            "text": "Where to Buy",
+            "heading_tag": "h0"
+          }
+        },
+        "richtext_6LGVCf": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h5>See PeckPerk in person and skip the wait</h5>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_F9Rmcj",
+        "richtext_6LGVCf"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/ff.jpg",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 33
+      }
+    },
+    "rich_text_PjWyLA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fK7XRk": {
+          "type": "heading",
+          "settings": {
+            "text": "PeckPerk Certified Retail Partners",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": "",
+            "css": ""
+          }
+        },
+        "richtext_McC9iA": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Shop PeckPerk at www.peckperk.com or with one of our approved retail partners. All partners are certified resellers, ensuring you're covered by the official PeckPerk warranty.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fK7XRk",
+        "richtext_McC9iA"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "logo_list_GFiMgW": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_PGUhJz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/4_4b5b2f3c-d15d-4b46-9baf-39017293836d.png",
+            "logo_width": 150,
+            "link": ""
+          }
+        },
+        "logo_qrbBJz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/6.png",
+            "logo_width": 150,
+            "link": ""
+          }
+        },
+        "logo_JDR9a7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/5_51a212cd-fd59-430f-a549-53ff9fba9474.png",
+            "logo_width": 150,
+            "link": "https://www.google.com/maps/search/homegoods"
+          }
+        },
+        "logo_adBdF9": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Logo.png",
+            "logo_width": 150,
+            "link": "https://www.google.com/maps/search/marshalls"
+          }
+        },
+        "logo_jH7Xkr": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Amazon-Logo_759735df-740a-473a-87dd-d852389324b8.png",
+            "logo_width": 150,
+            "link": "https://www.google.com/maps/search/tjmaxx"
+          }
+        }
+      },
+      "block_order": [
+        "logo_PGUhJz",
+        "logo_qrbBJz",
+        "logo_JDR9a7",
+        "logo_adBdF9",
+        "logo_jH7Xkr"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "Sales Traction Online & Offline",
+        "content": "",
+        "text_alignment": "start",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "logo_list_wG9dcJ": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_BEdUnq": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/backyard_birds.png",
+            "logo_width": 100,
+            "link": "https://www.google.com/maps/place/Backyard+Birds/@40.7129272,-111.8742434,15z/data=!3m1!4b1!4m6!3m5!1s0x87526027eb0bddc7:0x99b6cdc590a54032!8m2!3d40.7129124!4d-111.8557894!16s%2Fg%2F1v2kxxr_?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_NQTg3D": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Country_Boys_Garden_Center.png",
+            "logo_width": 200,
+            "link": "https://www.google.com/maps/place/Country+Boy's/@34.8208012,-82.2632177,18.25z/data=!4m6!3m5!1s0x885828f682eab2b3:0xb091b3243080cae7!8m2!3d34.820989!4d-82.262156!16s%2Fg%2F1thxwyc4?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_KQGGpa": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Cornell_Farms.png",
+            "logo_width": 200,
+            "link": "https://www.google.com/maps/place/Cornell+Farm/@45.5108297,-122.7627526,17z/data=!3m1!4b1!4m6!3m5!1s0x54950967d99cc4a3:0x558cfc1bb6691c96!8m2!3d45.510826!4d-122.7601777!16s%2Fg%2F1w8w9qs9?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_tGG9J9": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/The_Natural_Gardener.png",
+            "logo_width": 200,
+            "link": "https://www.google.com/maps/place/The+Natural+Gardener/@30.2570656,-97.8931082,17z/data=!3m1!4b1!4m6!3m5!1s0x865b49970d81fe55:0x7e6311b99b97371f!8m2!3d30.257061!4d-97.8905333!16s%2Fg%2F1tc_rfh5?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_JxdaWq": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/The_garden_center.png",
+            "logo_width": 120,
+            "link": "https://www.google.com/maps/place/The+Garden+Center/@41.4001815,-99.6278644,16.75z/data=!4m6!3m5!1s0x879c5c7cf62451f7:0xa30872876f2baa2a!8m2!3d41.4000701!4d-99.6256027!16s%2Fg%2F1v2pqqbc?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_QTreQY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Weston_Garden_Center_LLC.png",
+            "logo_width": 150,
+            "link": "https://www.google.com/maps/@39.4226088,-94.9000748,3a,19y,157.91h,92.24t/data=!3m7!1e1!3m5!1sGnYhEK7yFnWScEic1jNj_A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-2.244406762840768%26panoid%3DGnYhEK7yFnWScEic1jNj_A%26yaw%3D157.91097046100555!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_EmtdLg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/World_Outdoor_Emporium.png",
+            "logo_width": 100,
+            "link": "https://www.google.com/maps/place/World+Outdoor+Emporium/@38.7437033,-90.6063581,17z/data=!4m6!3m5!1s0x87df29fd5c9cd6b7:0x9ebb4446e3aae32e!8m2!3d38.7437382!4d-90.6037433!16s%2Fg%2F1wc31syh?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_DRHntz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Maid_Rite_Feeds.png",
+            "logo_width": 120,
+            "link": "https://www.google.com/maps/place/Maid+Rite+Feeds/@32.249766,-109.8336916,17z/data=!4m6!3m5!1s0x86d79c37dd019e03:0x882f127fbe40de92!8m2!3d32.2498607!4d-109.8310915!16s%2Fg%2F1tdgq87v?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_JKJdLT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Gilroy_Farmers_Supply.png",
+            "logo_width": 150,
+            "link": "https://www.google.com/maps/place/Gilroy+Farmers+Supply/@37.0418211,-121.5896479,17z/data=!4m6!3m5!1s0x8091e19f3deba699:0xf3898aa2f6a9826e!8m2!3d37.0418722!4d-121.5870185!16s%2Fg%2F11scknh6z4?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        },
+        "logo_PyFJCP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Pioneer_Feed_Company1.png",
+            "logo_width": 200,
+            "link": "https://www.google.com/maps/place/Pioneer+Feed+Co/@45.7774769,-122.6629745,17z/data=!4m6!3m5!1s0x5495b2c8c5bdc76b:0x394c41104dc461c9!8m2!3d45.7773869!4d-122.6603482!16s%2Fg%2F1tc_qqz_?entry=ttu&g_ep=Egoy"
+          }
+        }
+      },
+      "block_order": [
+        "logo_BEdUnq",
+        "logo_NQTg3D",
+        "logo_KQGGpa",
+        "logo_tGG9J9",
+        "logo_JxdaWq",
+        "logo_QTreQY",
+        "logo_EmtdLg",
+        "logo_DRHntz",
+        "logo_JKJdLT",
+        "logo_PyFJCP"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "Independent chains",
+        "content": "",
+        "text_alignment": "start",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "1755659210fd8008a1": {
+      "type": "apps",
+      "blocks": {
+        "mappy_store_locator_page_embed_block_DQY67t": {
+          "type": "shopify://apps/mappy-store-locator/blocks/page-embed-block/edfca2bd-82ad-413c-b32c-580d239b17ab",
+          "settings": {
+            "is_show_heading_map": true,
+            "is_show_description_map": false
+          }
+        }
+      },
+      "block_order": [
+        "mappy_store_locator_page_embed_block_DQY67t"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "rich_text_cTBeqy": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_FQNqt3": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Availability may vary by location. We recommend calling your local store or checking their website to confirm stock. Or you can order directly from our website.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_FQNqt3"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "contact_VyXfHj": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Become a Retailer",
+        "content": "",
+        "text_position": "start",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_trQ46X",
+    "rich_text_PjWyLA",
+    "logo_list_GFiMgW",
+    "logo_list_wG9dcJ",
+    "1755659210fd8008a1",
+    "rich_text_cTBeqy",
+    "contact_VyXfHj"
+  ]
+}

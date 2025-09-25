@@ -1,0 +1,207 @@
+{%- render 'section-spacing-collapsing' -%}
+
+{% schema %}
+{
+  "name": "自定义拼贴视频模块",
+  "settings": [
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "上传视频文件（支持 MP4 格式）"
+    },
+    // 电脑端图片配置
+    { "type": "image_picker", "id": "desktop_top_1", "label": "电脑端上部图片1" },
+    { "type": "image_picker", "id": "desktop_top_2", "label": "电脑端上部图片2" },
+    { "type": "image_picker", "id": "desktop_top_3", "label": "电脑端上部图片3" },
+    { "type": "image_picker", "id": "desktop_top_4", "label": "电脑端上部图片4" },
+    { "type": "image_picker", "id": "desktop_top_5", "label": "电脑端上部图片5" },
+    { "type": "image_picker", "id": "desktop_center_1", "label": "电脑端中部左侧图片1" },
+    { "type": "image_picker", "id": "desktop_center_2", "label": "电脑端中部左侧图片2" },
+    { "type": "image_picker", "id": "desktop_center_4", "label": "电脑端中部右侧图片1" },
+    { "type": "image_picker", "id": "desktop_center_5", "label": "电脑端中部右侧图片2" },
+    { "type": "image_picker", "id": "desktop_bottom_1", "label": "电脑端底部图片1" },
+    { "type": "image_picker", "id": "desktop_bottom_2", "label": "电脑端底部图片2" },
+    { "type": "image_picker", "id": "desktop_bottom_3", "label": "电脑端底部图片3" },
+    { "type": "image_picker", "id": "desktop_bottom_4", "label": "电脑端底部图片4" },
+    { "type": "image_picker", "id": "desktop_bottom_5", "label": "电脑端底部图片5" }
+  ],
+  "presets": [{"name": "自定义拼贴视频模块"}]
+}
+{% endschema %}
+
+<section class="collage-section">
+  <!-- 电脑端布局 -->
+  <div class="desktop-layout">
+    <!-- 上部三角形 -->
+    <div class="desktop-top">
+      <div class="top_1">
+        <img src="{{ section.settings.desktop_top_1 | img_url: 'master' }}" alt="Desktop Top 1">
+      </div>
+      <div class="top_2">
+        <img src="{{ section.settings.desktop_top_2 | img_url: 'master' }}" alt="Desktop Top 2">
+      </div>
+      <div class="top_3">
+        <img src="{{ section.settings.desktop_top_3 | img_url: 'master' }}" alt="Desktop Top 3">
+      </div>
+      <div class="top_4">
+        <img src="{{ section.settings.desktop_top_4 | img_url: 'master' }}" alt="Desktop Top 4">
+      </div>
+      <div class="top_5">
+        <img src="{{ section.settings.desktop_top_5 | img_url: 'master' }}" alt="Desktop Top 5">
+      </div>
+    </div>
+
+    <div class="desktop-center">
+      <div class="center_1">
+        <img src="{{ section.settings.desktop_center_1 | img_url: 'master' }}" alt="Desktop center 1">
+      </div>
+      <div class="center_2">
+        <img src="{{ section.settings.desktop_center_2 | img_url: 'master' }}" alt="Desktop center 2">
+      </div>
+      <div class="center_3">
+        <video 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          poster="{{ section.settings.video_file.preview_image.src | img_url: '800x' }}"
+          class="custom-video"
+          style="width: 100%; height: 100%; object-fit: cover;border-radius:10px;"
+        >
+          <source src="{{ section.settings.video_file.sources[1].url }}" type="video/mp4">
+          您的浏览器不支持视频标签
+        </video>
+      </div>
+      <div class="center_4">
+        <img src="{{ section.settings.desktop_center_4 | img_url: 'master' }}" alt="Desktop center 4">
+      </div>
+      <div class="center_5">
+        <img src="{{ section.settings.desktop_center_5 | img_url: 'master' }}" alt="Desktop center 5">
+      </div>
+    </div>
+
+    <!-- 底部倒三角 -->
+    <div class="desktop-bottom">
+      <div class="bottom_1">
+        <img src="{{ section.settings.desktop_bottom_1 | img_url: 'master' }}" alt="Desktop bottom 1">
+      </div>
+      <div class="bottom_2">
+        <img src="{{ section.settings.desktop_bottom_2 | img_url: 'master' }}" alt="Desktop bottom 2">
+      </div>
+      <div class="bottom_3">
+        <img src="{{ section.settings.desktop_bottom_3 | img_url: 'master' }}" alt="Desktop bottom 3">
+      </div>
+      <div class="bottom_4">
+        <img src="{{ section.settings.desktop_bottom_4 | img_url: 'master' }}" alt="Desktop bottom 4">
+      </div>
+      <div class="bottom_5">
+        <img src="{{ section.settings.desktop_bottom_5 | img_url: 'master' }}" alt="Desktop bottom 5">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  
+   #shopify-section-{{ section.id }}{
+     margin-bottom:100px;
+   }
+   .desktop-layout {
+     width: 100%;
+     max-width: 1600px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     gap: 10px; /* 控制行间距 */
+   }
+
+   /* 所有图片容器共用同一套宽度比例 */
+   .desktop-top,
+   .desktop-center,
+   .desktop-bottom {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+   }
+
+   .desktop-top div {
+     display: flex;
+     align-items: flex-end;
+     height:250px;
+   }
+
+   /* 所有图片通用样式 */
+   .desktop-layout img {
+     object-fit: cover;
+     border-radius: 6px;
+     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     transition: transform 0.3s ease;
+     aspect-ratio: 4 / 3;
+   }
+
+
+
+  .top_1, .top_5, .bottom_1, .bottom_5 {
+    flex-basis: 8% !important;
+  }
+
+   .top_2, .top_4, .bottom_2, .bottom_4{
+    flex-basis: 15% !important;
+     /* height: 10% !important; */
+  }
+
+    .top_3, .center_4, .center_2, .bottom_3 {
+    flex-basis: 20% !important;
+      /* height: 240px !important; */
+  }
+  .center_1, .center_5{
+    flex-basis: 12% !important;
+    margin: auto 0;
+  }
+
+  .center_3, .center_3 vedio{
+    flex-basis: 27% !important;
+    border-radius:10px;
+  }
+
+
+
+
+   /* 响应式调整 */
+   @media (max-width: 700px) {
+     .center_3, .center_3 vedio {
+       flex-basis: 50% !important;
+     }
+     .center_2,.center_4{    
+    display: grid;
+    flex-basis: 20% !important;
+    align-items: center;
+    flex-basis: 20% !important;
+
+     }
+     #shopify-section-{{ section.id }}{
+     margin-bottom:50px;
+       margin-top:100px;
+   }
+     .top_3, .bottom_3 {
+       flex-basis: 30% !important;
+     }
+     .top_2, .top_4, .bottom_2, .bottom_4 {
+        flex-basis: 20% !important;
+    }
+     .top_1,.top_5,.bottom_5,.bottom_1,.center_1,.center_5{
+       display:none!important;
+     }
+     .desktop-layout > div {
+       flex-wrap: wrap;
+       gap: 10px;
+     }
+      .desktop-top div {
+     height:0px;
+   }
+
+     /* .desktop-layout > div > div {
+       flex-basis: calc(50% - 4px) !important; /* 移动端每行2张 */
+     } */
+   }
+</style>

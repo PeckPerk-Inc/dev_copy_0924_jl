@@ -1,0 +1,253 @@
+{% schema %}
+{
+  "name": "Custom Slideshow1",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "User-Friendly App for Nature Lovers"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "手机部分是视频 + 图片 连同文字为一篇可左右跳转"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slideshow",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+{%- render 'section-spacing-collapsing' -%}
+<div id="shopify-section-{{ section.id }}" {% render 'section-properties' %}>
+  <div class="section-stack">
+    <!-- 如果需要添加模块标题，可在此处插入 section-header -->
+
+    <!-- 将 slideshow-container 放入主题统一的容器中 -->
+    <div class="slideshow-container">
+      <div class="slides">
+        {% for block in section.blocks %}
+          <div class="slide">
+            <!-- 左侧内容：视频或图片 -->
+            <div class="slide-media">
+              {% if block.settings.video_url != blank %}
+                <video class="slide-content" autoplay loop muted playsinline>
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+              {% elsif block.settings.image != blank %}
+                <img class="slide-content" src="{{ block.settings.image | image_url }}" alt="Slide Image">
+              {% endif %}
+            </div>
+
+            <!-- 右侧内容：文字 -->
+            <div class="slide-text">
+              <h2>{{ block.settings.heading }}</h2>
+              <p>{{ block.settings.subheading }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- 左右箭头 -->
+      <div class="slide-nav">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+      <!-- 指示器 -->
+      <div class="slide-indicators">
+        {% for block in section.blocks %}
+          <span class="dot" onclick="currentSlide({{ forloop.index }})"></span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* 响应式样式调整 */
+  @media screen and (max-width: 768px) {
+    #shopify-section-{{ section.id }} .slide {
+      display: flex;
+      width: 100%;
+      min-width: 100%;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0px!important;
+    }
+    #shopify-section-{{ section.id }} .slide-media,
+    #shopify-section-{{ section.id }} .slide-text {
+      width: 80%!important;
+    }
+    .slide-indicators {
+      margin-top: 10px!important;
+    }
+  }
+
+  /* 外层容器由 Impact 主题统一控制居中 */
+  #shopify-section-{{ section.id }} {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 使用主题统一容器的宽度控制（Impact 主题中 section-stack 内部通常使用 var(--container-inner-width)） */
+  #shopify-section-{{ section.id }} .slideshow-container {
+    width: var(--container-inner-width);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* 滑动容器的样式 */
+  #shopify-section-{{ section.id }} .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  #shopify-section-{{ section.id }} .slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  /* 左侧：视频或图片 */
+  #shopify-section-{{ section.id }} .slide-media {
+    width: 40%;
+  }
+  #shopify-section-{{ section.id }} .slide-content {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* 右侧：文字 */
+  #shopify-section-{{ section.id }} .slide-text {
+    width: 30%;
+    padding: 20px;
+  }
+  #shopify-section-{{ section.id }} .slide-text h2 {
+    font-size: 22px;
+    color: #333;
+  }
+  #shopify-section-{{ section.id }} .slide-text p {
+    font-size: 16px;
+    color: #666;
+  }
+
+  /* 导航箭头 */
+  #shopify-section-{{ section.id }} .slide-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+  #shopify-section-{{ section.id }} .slide-nav button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  #shopify-section-{{ section.id }} .slide-nav button:hover {
+    color: #333;
+  }
+
+  /* 指示器 */
+  #shopify-section-{{ section.id }} .slide-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+  }
+  #shopify-section-{{ section.id }} .dot {
+    height: 4px;
+    width: 30px;
+    background-color: #ccc;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .dot.active {
+    background-color: #ffa61a;
+  }
+</style>
+
+<script>
+  let slideIndex = 0;
+  function updateSlidePosition() {
+    const slidesWrapper = document.querySelector('#shopify-section-{{ section.id }} .slides');
+    const dots = document.querySelectorAll('#shopify-section-{{ section.id }} .dot');
+    const totalSlides = document.querySelectorAll('#shopify-section-{{ section.id }} .slide').length;
+    slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === slideIndex);
+    });
+  }
+  function moveSlide(step) {
+    const totalSlides = document.querySelectorAll('#shopify-section-{{ section.id }} .slide').length;
+    slideIndex = (slideIndex + step + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+  function currentSlide(index) {
+    const totalSlides = document.querySelectorAll('#shopify-section-{{ section.id }} .slide').length;
+    slideIndex = index % totalSlides;
+    updateSlidePosition();
+  }
+  function initTouchEvents() {
+    const slidesWrapper = document.querySelector('#shopify-section-{{ section.id }} .slides');
+    let startX = 0;
+    let endX = 0;
+    slidesWrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, false);
+    slidesWrapper.addEventListener('touchmove', (e) => {
+      endX = e.touches[0].clientX;
+    }, false);
+    slidesWrapper.addEventListener('touchend', () => {
+      const diffX = endX - startX;
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          moveSlide(-1);
+        } else {
+          moveSlide(1);
+        }
+      }
+    }, false);
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    updateSlidePosition();
+    initTouchEvents();
+  });
+</script>
+
+

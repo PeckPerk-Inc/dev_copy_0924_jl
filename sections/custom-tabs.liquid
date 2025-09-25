@@ -1,0 +1,792 @@
+{%- render 'section-spacing-collapsing' -%}
+
+<style>
+  .show_button { white-space:nowrap; }
+  .tab1_right_text, .tab1_left_text, .tab2_right_text, .tab2_left_text, .tab3_right_text, .tan3_left_text, .tab4_right_text, .tab4_left_text, .tab5_right_text, .tab5_left_text{ 
+    width:fit-content;
+    min-width:15vw;
+    height:fit-content;
+  }
+  #shopify-section-{{ section.id }} img{
+    object-fit: cover!important;
+  }
+  @media screen and (max-width: 700px) {
+  /* 新增针对.image_two内部图片的样式 */
+  #shopify-section-{{ section.id }} .image_two > div:first-child {
+    height: 110px !important; /* 顶部图片高度 */
+  }
+
+  #shopify-section-{{ section.id }} .image_two > div:not(:first-child) {
+    height: 100px !important; /* 底部图片高度 */
+  }
+
+  /* 保持图片自适应容器 */
+  #shopify-section-{{ section.id }} .image_two_container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* 调整特定tab的图片容器间距 */
+  #shopify-section-{{ section.id }} .tab3_contant .image_two {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  /* 确保图片比例保持 */
+  #shopify-section-{{ section.id }} .image_two_container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+}
+  @media screen and (min-width: 700px) {
+    .tabs{
+      transform:scale(1.3);
+    }
+    .tab1_center_image_bottom,.tab5_center_image_bottom{
+      margin-top:-40px;
+    }
+    #shopify-section-{{ section.id }} {
+      --tabs-max-width: {% if section.settings.content_size == 'small' %}760{% elsif section.settings.content_size == 'medium' %}1000{% elsif section.settings.content_size == 'large' %}1260{% endif %}px;
+      --section-stack-spacing-block: var(--spacing-8);
+    }
+    #shopify-section-{{ section.id }} .tab1_right_text,#shopify-section-{{ section.id }} .tab3_right_text,#shopify-section-{{ section.id }} .tab5_right_text{
+    margin-top:60%!important;
+  }
+  }
+  @media screen and (max-width: 700px) {
+    .tab1_right_text,.tab2_right_text,.tab3_right_text,.tab4_right_text,.tab5_right_text{
+    margin-top:5%!important;
+  }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .tabs{
+      transform:scale(1.3);
+    }
+    #shopify-section-{{ section.id }} {
+      --section-stack-spacing-block: var(--spacing-10);
+    }
+  }
+  #shopify-section-{{ section.id }} .show_button{
+    text-align: center;
+    display:flex;
+    gap:10px;
+    justify-content: center;
+  }
+
+  
+  /* Tab按钮样式 */
+  #shopify-section-{{ section.id }} .tab_button,
+  #shopify-section-{{ section.id }} .tab_button2,
+  #shopify-section-{{ section.id }} .tab_button3,
+  #shopify-section-{{ section.id }} .tab_button4,
+  #shopify-section-{{ section.id }} .tab_button5{
+    /* background: linear-gradient(45deg, #4f79a6, #a1c4fd); */
+    border: none;
+    padding: 10px 20px;
+    /* border-radius: 25px; */
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-bottom: 2px solid transparent; /* 透明底部边框 */
+  }
+
+  #shopify-section-{{ section.id }} .tab_button:hover,
+  #shopify-section-{{ section.id }} .tab_button2:hover,
+  #shopify-section-{{ section.id }} .tab_button3:hover,
+  #shopify-section-{{ section.id }} .tab_button4:hover,
+  #shopify-section-{{ section.id }} .tab_button5:hover{
+    /* background: linear-gradient(45deg, #a1c4fd, #4f79a6); */
+    transform: translateY(-2px);
+  }
+
+  #shopify-section-{{ section.id }} .tab_button::after,
+  #shopify-section-{{ section.id }} .tab_button2::after,
+  #shopify-section-{{ section.id }} .tab_button3::after,
+  #shopify-section-{{ section.id }} .tab_button4::after,
+  #shopify-section-{{ section.id }} .tab_button5::after{
+    content: '';
+    display: block;
+    width: 75%; /* 控制下划线长度 */
+    margin: 0 auto; /* 水平居中 */
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .tab_button.active::after,
+  #shopify-section-{{ section.id }} .tab_button2.active::after,
+  #shopify-section-{{ section.id }} .tab_button3.active::after,
+  #shopify-section-{{ section.id }} .tab_button4.active::after,
+  #shopify-section-{{ section.id }} .tab_button5.active::after{
+    border-color: #000;
+  }
+
+
+  /* 栏目文本样式 */
+  #shopify-section-{{ section.id }} .prose {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .subheading {
+    font-size: 18px;
+    color: #777;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  #shopify-section-{{ section.id }} .h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #f05a28, #ff7300);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* 栏目内容区域 */
+  #shopify-section-{{ section.id }} .tab_contant {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    height: 450px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant .text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    width: 25%;
+    /* font-size:18px */
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant .tab1_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab2_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab3_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab5_right_text{
+    font-size: 16px;
+    padding: 10px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 25%;
+  }
+  #shopify-section-{{ section.id }} .tab_contant .tab1_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab2_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab3_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab4_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab5_right_text{
+    border-radius:20px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant .tab4_right_text {
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .tab_contant p{
+    font-size: 20px;
+  }
+
+   /* Tab内容文本区的样式 */
+  #shopify-section-{{ section.id }} .tab1_right_text,
+  #shopify-section-{{ section.id }} .tab2_right_text,
+  #shopify-section-{{ section.id }} .tab3_right_text,
+  #shopify-section-{{ section.id }} .tab4_right_text,
+  #shopify-section-{{ section.id }} .tab5_right_text{
+    border:1px solid #bcbcbc;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+    /* 图片样式 */
+  #shopify-section-{{ section.id }} img {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height:100%;
+  }
+
+  #shopify-section-{{ section.id }} img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .image_one_container{
+    height:420px;
+  }
+
+   .tab_center_image_top{
+    height:200px;
+  }
+  .tab_center_image_bottom{
+    height:154px;
+  }
+
+  .tab1_contant .image_one_container,
+  .tab2_contant .tab2_center_image_top,
+  .tab4_contant .tab4_center_image_top,
+  .tab5_contant .image_one_container{
+    margin-top:50px;
+  }
+   .tab3_contant .image_two_container{
+    margin-top:110px;
+  }
+
+  /* 布局中的图像分配 */
+  #shopify-section-{{ section.id }} .image {
+    display: flex;
+    gap: 20px;
+    width:100%;
+  }
+
+  #shopify-section-{{ section.id }} .image_one {
+    width: 60%;
+  }
+
+  #shopify-section-{{ section.id }} .image_two {
+    width: 40%;
+    display: grid;
+    gap: 10px;
+    margin-bottom:30px;
+  }
+@media screen and (max-width: 700px) {
+  #shopify-section-{{ section.id }} {
+    --section-stack-spacing-block: var(--spacing-6);
+  }
+  #shopify-section-{{ section.id }} .show_button {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 15px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_button,
+  #shopify-section-{{ section.id }} .tab_button2,
+  #shopify-section-{{ section.id }} .tab_button3,
+  #shopify-section-{{ section.id }} .tab_button4,
+  #shopify-section-{{ section.id }} .tab_button5{
+    font-size: 18px;
+    padding: 8px 15px;
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .h2 {
+    font-size: 24px;
+    padding: 0 15px;
+  }
+
+  #shopify-section-{{ section.id }} .subheading {
+    font-size: 14px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant {
+    flex-direction: column;
+    height: auto;
+    padding: 0 15px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant .text,
+  #shopify-section-{{ section.id }} .image {
+    width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .image {
+    order: 2;
+  }
+  .tab1_contant .image_one,.tab2_contant .image_two,.tab4_contant .image_two,.tab5_contant .image_one{
+    margin-top: 30px!important;
+  }
+  .tab3_contant .image_two{
+    height:120px;
+  }
+  .tab3_contant .image{
+    align-items: center;
+  }
+  #shopify-section-{{ section.id }} .image_one_container,
+  #shopify-section-{{ section.id }} .image_two_container {
+    height: auto;
+    margin-top: 0px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant .tab1_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab2_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab3_right_text,
+  #shopify-section-{{ section.id }} .tab_contant .tab5_right_text{
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  #shopify-section-{{ section.id }} .tab_contant p,
+  #shopify-section-{{ section.id }} .tab5_contant p{
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  #shopify-section-{{ section.id }} .image_two {
+    grid-template-columns: 1fr;
+  }
+
+  #shopify-section-{{ section.id }} img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .tab3_contant .image_two_container,
+  #shopify-section-{{ section.id }} .tab4_contant .tab4_center_image_top {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #shopify-section-{{ section.id }} .tab_button,
+  #shopify-section-{{ section.id }} .tab_button2,
+  #shopify-section-{{ section.id }} .tab_button3,
+  #shopify-section-{{ section.id }} .tab_button4,
+  #shopify-section-{{ section.id }} .tab_button5{
+    font-size: 16px;
+  }
+
+  #shopify-section-{{ section.id }} img {
+    max-height: 250px;
+  }
+}
+
+</style>
+
+
+
+  <div {% render 'section-properties' %}>
+    <div class="tabs ">
+      <div class="section-stack">
+        {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+          <div class="prose text-center">
+            {%- if section.settings.subheading != blank -%}
+              <p class="subheading">{{ section.settings.subheading | escape }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.title != blank -%}
+              <p class="h2">{%- render 'styled-text', content: section.settings.title, text_color: section.settings.heading_color, gradient: section.settings.heading_gradient -%}</p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <div class="tabs-container">
+          <div class="show_button">
+            {%- if section.settings.tab_title != blank -%}
+                <button class="tab_button active">{{ section.settings.tab_title }}</button>
+            {%- endif -%}
+            {%- if section.settings.tab2_title != blank -%}
+                <button class="tab_button2">{{ section.settings.tab2_title }}</button>
+            {%- endif -%}
+            {%- if section.settings.tab3_title != blank -%}
+                <button class="tab_button3">{{ section.settings.tab3_title }}</button>
+            {%- endif -%}
+            {%- if section.settings.tab4_title != blank -%}
+                <button class="tab_button4">{{ section.settings.tab4_title }}</button>
+            {%- endif -%}
+            {%- if section.settings.tab5_title != blank -%}
+                <button class="tab_button5">{{ section.settings.tab5_title }}</button>
+            {%- endif -%}
+          </div>
+
+          <div class="contant">
+            {%- if section.settings.tab_title != blank -%}
+              <div class="tab_contant tab1_contant">
+                <div class="image">
+                  <div class="image_one">
+                    <div class="image_one_container">
+                      {{- section.settings.tab_image | image_url: width: section.settings.tab_image.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                  <div class="image_two">
+                    <div class="tab1_center_image_top image_two_container tab_center_image_top">
+                      {{- section.settings.tab_image2 | image_url: width: section.settings.tab_image2.width | image_tag: loading: 'lazy'}}
+                    </div>
+                    <div class="tab1_center_image_bottom image_two_container tab_center_image_bottom">
+                      {{- section.settings.tab_image3 | image_url: width: section.settings.tab_image3.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <div class="tab1_right_text">
+                    <span>{{ section.settings.tab_content }}</span>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.tab2_title != blank -%}
+              <div class="tab_contant tab2_contant">
+                <div class="image">
+                  <div class="image_one">
+                    <div class="image_one_container">
+                      {{- section.settings.tab2_image | image_url: width: section.settings.tab2_image.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                  <div class="image_two">
+                    <div class="tab2_center_image_top image_two_container tab_center_image_top">
+                      {{- section.settings.tab2_image2 | image_url: width: section.settings.tab2_image2.width | image_tag: loading: 'lazy'}}
+                    </div>
+                    <div class="tab2_center_image_bottom image_two_container tab_center_image_bottom">
+                      {{- section.settings.tab2_image3 | image_url: width: section.settings.tab2_image3.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <div class="tab1_right_text">
+                    <span>{{ section.settings.tab2_content }}</span>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.tab2_title != blank -%}
+              <div class="tab_contant tab3_contant">
+                <div class="image">
+                  <div class="image_two">
+                    <div class="tab3_center_image_top image_two_container tab_center_image_top">
+                      {{- section.settings.tab3_image2 | image_url: width: section.settings.tab3_image2.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                  <div class="image_one">
+                    <div class="image_one_container">
+                      {{- section.settings.tab3_image | image_url: width: section.settings.tab3_image.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <div class="tab3_right_text">
+                    <span>{{ section.settings.tab3_content }}</span>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.tab4_title != blank -%}
+              <div class="tab_contant tab4_contant">
+                <div class="text">
+                  <div class="tab4_right_text">
+                    <span>{{ section.settings.tab4_content }}</span>
+                  </div>
+                </div>
+                <div class="image">
+                  <div class="image_two">
+                    <div class="tab4_center_image_top image_two_container tab_center_image_top">
+                      {{- section.settings.tab4_image2 | image_url: width: section.settings.tab4_image2.width| image_tag: loading: 'lazy'}}
+                    </div>
+                    <div class="tab4_center_image_bottom image_two_container tab_center_image_bottom">
+                      {{- section.settings.tab4_image3 | image_url: width: section.settings.tab4_image3.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                  <div class="image_one">
+                    <div class="image_one_container">
+                      {{- section.settings.tab4_image | image_url: width: section.settings.tab4_image.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.tab5_title != blank -%}
+              <div class="tab_contant tab5_contant">
+                <div class="image">
+                  <div class="image_one">
+                    <div class="image_one_container">
+                      {{- section.settings.tab5_image | image_url: width: section.settings.tab5_image.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                  <div class="image_two">
+                    <div class="tab5_center_image_top image_two_container tab_center_image_top">
+                      {{- section.settings.tab5_image2 | image_url: width: section.settings.tab5_image2.width | image_tag: loading: 'lazy'}}
+                    </div>
+                    <div class="tab5_center_image_bottom image_two_container tab_center_image_bottom">
+                      {{- section.settings.tab5_image3 | image_url: width: section.settings.tab5_image3.width | image_tag: loading: 'lazy'}}
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <div class="tab5_right_text">
+                    <span>{{ section.settings.tab5_content }}</span>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".show_button button");
+    const contents = document.querySelectorAll(".tab_contant");
+
+    // 默认显示第一个 tab，隐藏其他 tab
+    function hideAllTabs() {
+      contents.forEach((content) => content.style.display = "none");
+    }
+
+    function showTab(index) {
+      hideAllTabs();
+      contents[index].style.display = "flex"; // 根据你的布局设置适当的显示样式
+    }
+
+    // 初始化，默认显示第一个 tab
+    hideAllTabs();
+    if (contents.length > 0) {
+      contents[0].style.display = "flex";
+    }
+
+    // 按钮点击事件
+    // buttons.forEach((button, index) => {
+    //   button.addEventListener("click", () => showTab(index));
+    // });
+
+    // 为每个按钮添加点击事件
+    buttons.forEach((button,index) => {
+      button.addEventListener('click', function(e) {
+        // e.preventDefault();
+        // 移除所有按钮的active类
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // 为当前点击的按钮添加active类
+        this.classList.add('active');
+        
+        // 这里可以添加其他逻辑，如切换内容等
+        
+        showTab(index)
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Tabs",
+  "class": "shopify-section--tabs",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },// 新增 presets 配置 ↓
+  "presets": [
+    {
+      "name": "Custom Tabs",
+      "settings": {
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading"
+      }
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "content_size",
+      "label": "Content size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "fill",
+          "label": "Fill page"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Desktop text alignment",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "color_background",
+      "id": "heading_gradient",
+      "label": "Heading gradient"
+    },
+    {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab1 Title",
+          "default": "Tab1 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_image",
+          "label": "Tab1 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_image2",
+          "label": "Tab1 Image2"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_image3",
+          "label": "Tab1 Image3"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab1 Content",
+          "default": "<p>Tab1 Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "tab2_title",
+          "label": "Tab2 Title",
+          "default": "Tab2 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab2_image",
+          "label": "Tab2 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab2_image2",
+          "label": "Tab2 Image2"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab2_image3",
+          "label": "Tab2 Image3"
+        },
+        {
+          "type": "richtext",
+          "id": "tab2_content",
+          "label": "Tab2 Content",
+          "default": "<p>Tab2 Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "tab3_title",
+          "label": "Tab3 Title",
+          "default": "Tab3 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab3_image",
+          "label": "Tab3 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab3_image2",
+          "label": "Tab3 Image2"
+        },
+        {
+          "type": "richtext",
+          "id": "tab3_content",
+          "label": "Tab3 Content",
+          "default": "<p>Tab3 Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "tab4_title",
+          "label": "Tab4 Title",
+          "default": "Tab4 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab4_image",
+          "label": "Tab4 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab4_image2",
+          "label": "Tab4 Image2"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab4_image3",
+          "label": "Tab4 Image3"
+        },
+        {
+          "type": "richtext",
+          "id": "tab4_content",
+          "label": "Tab4 Content",
+          "default": "<p>Tab4 Content</p>"
+        },
+    {
+          "type": "text",
+          "id": "tab5_title",
+          "label": "Tab5 Title",
+          "default": "Tab5 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab5_image",
+          "label": "Tab5 Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab5_image2",
+          "label": "Tab5 Image2"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab5_image3",
+          "label": "Tab5 Image3"
+        },
+        {
+          "type": "richtext",
+          "id": "tab5_content",
+          "label": "Tab5 Content",
+          "default": "<p>Tab5 Content</p>"
+        },
+    
+  ]
+}
+{% endschema %}

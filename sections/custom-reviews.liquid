@@ -1,0 +1,482 @@
+{%- if section.blocks.size > 0 -%}
+  {%- render 'section-spacing-collapsing' -%}
+
+  <style>
+    #shopify-section-{{ section.id }} .text-custom{
+      max-height:unset!important;
+    }
+    .custom-carousel-controls button svg{
+      height:15px;
+      width:15px;
+    }
+    #shopify-section-{{ section.id }} .testimonial__product-name{
+      color:rgb(255 183 74);
+    }
+    
+    #shopify-section-{{ section.id }} .custom_div{
+      padding:0px 10px 20px 10px; 
+      gap: 0.625rem;
+    display: grid;
+    }
+    #shopify-section-{{ section.id }} .testimonial{
+      padding:0;
+      gap:5px;
+          border: 1px solid #bcbcbc;
+          border-radius: 10px;
+    }
+    #shopify-section-{{ section.id }} .rounded{
+      width:100%;
+    }
+    #shopify-section-{{ section.id }} .rating{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+     #shopify-section-{{ section.id }} .v-stack{
+       width:100%;
+     }
+    #shopify-section-{{ section.id }} .review-contant p{
+       font-size:12px;
+     }
+    #shopify-section-{{ section.id }} .text-subdued{
+      font-size:20px;
+      font-width:300;
+    }
+    #shopify-section-{{ section.id }} .rating__stars{
+      display:flex;
+    }
+    #shopify-section-{{ section.id }} {
+      --testimonial-list-items-per-row: 1;
+      --testimonial-list-carousel-item-width: 74vw;
+
+      --testimonial-list-grid: {% if section.settings.stack_testimonials %}auto / repeat(var(--testimonial-list-items-per-row), minmax(0, 1fr)){% else %}auto / auto-flow var(--testimonial-list-carousel-item-width){% endif %};
+    }
+
+    #shopify-section-{{ section.id }} .scrollbar {
+      {%- assign controls_color = section.settings.text_color | default: section.settings.heading_color | default: settings.text_color -%}
+      --text-color: {{ controls_color.rgb }};
+    }
+    @media screen and (max-width: 700px) {
+      .testimonial{
+        min-height:320px;
+      }
+     #shopify-section-{{ section.id }} .section{
+       padding-bottom:0px;
+     }
+     #shopify-section-{{ section.id }} .rating__stars{
+       margin-top:4px;
+     }
+    #shopify-section-{{ section.id }}{
+      --testimonial-list-carousel-item-width: 40vw;
+    }
+      .testimonial__product-name{
+        font-size: 12px;
+      }
+      #shopify-section-{{ section.id }} .rating__star{
+        width:10px;
+      }
+      
+      #shopify-section-{{ section.id }} .review-contant p{
+        font-size:10px!important;
+      }
+      #shopify-section-{{ section.id }} .text-subdued{
+        font-size:14px!important;
+      }
+      #shopify-section-{{ section.id }} .gap-2{
+        gap:0;
+      }
+      .custom_div{
+        gap: 0.125rem!important;
+      }
+    }
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} {
+        --testimonial-list-items-per-row: 2;
+        --testimonial-list-carousel-item-width: 52vw;
+      }
+      #shopify-section-{{ section.id }} .testimonial{
+      min-height:400px;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      
+      #shopify-section-{{ section.id }} {
+        --testimonial-list-carousel-item-width: 36vw;
+      }
+    }
+
+    @media screen and (min-width: 1150px) {
+      #shopify-section-{{ section.id }} {
+        --testimonial-list-items-per-row: 3;
+        --testimonial-list-carousel-item-width: calc(100% / 4.5 - (var(--grid-gutter) / 3 * 2));
+      }
+    }
+    /* 新增按钮样式 */
+    #shopify-section-{{ section.id }} .testimonial__reviews-image img{
+      border-radius:10px 10px 0 0;
+    }
+    .custom-carousel-controls {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 16px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .custom-carousel-controls button {
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-carousel-controls button:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: scale(1.1);
+    }
+
+    .scrollable-with-controls {
+      position: relative;
+    }
+    .custom-carousel-controls button {
+  /* 添加初始隐藏状态 */
+  visibility: hidden;
+}
+  </style>
+
+  <div {% render 'section-properties' %}>
+    <div class="section-stack">
+      {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, heading_color: section.settings.heading_color, heading_gradient: section.settings.heading_gradient, content: section.settings.content, link_text: section.settings.link_text, link_url: section.settings.link_url -%}
+
+      <div class="scrollable-with-controls">
+        {%- assign scroll_area_id = 'scroll-area-' | append: section.id -%}
+
+        <scroll-carousel id="{{ scroll_area_id }}" class="testimonial-list scroll-area bleed {% if section.blocks.size > 3 %}is-scrollable{% endif %}">
+          {%- for block in section.blocks -%}
+            <div {% render 'surface', class: 'testimonial rounded-sm', background: section.settings.testimonial_card_background, text_color: section.settings.testimonial_card_text_color, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
+              {%- if block.settings.image != blank or block.settings.author != blank or block.settings.show_rating -%}
+                {%- liquid
+                  assign loading_strategy = nil
+        
+                  if section.index > 3 or forloop.index > 3
+                    assign loading_strategy = 'lazy'
+                  endif
+                -%}
+                {%- if block.settings.reviews_image != blank -%}
+                  <div class="testimonial__reviews-image">
+                    {{ block.settings.reviews_image | image_url: width: 800 | image_tag: 
+  loading: loading_strategy, 
+  class: 'rounded',
+  widths: '400,600,800,1000,1200',
+  sizes: '(max-width: 699px) calc(100vw - 40px), 50vw',
+  srcset: '400w 400h, 600w 600h, 800w 800h, 1000w 1000h, 1200w 1200h'
+}}
+                  </div>
+                {%- endif -%}
+                <div class="custom_div">
+                 <div class="h-stack align-start gap-4 sm:gap-6">
+                   {%- if block.settings.image != blank -%}
+                     {%- capture image_class -%}testimonial__image {% if block.settings.round_avatar %}rounded-full{% endif %}{%- endcapture -%}
+                     {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, sizes: '(max-width: 699px) 40px, 56px', widths: '40,56,80,112,120,168', class: image_class -}}
+                   {%- endif -%}
+ 
+                   <div class="v-stack gap-2 sm:gap-2.5">
+                     {%- if block.settings.show_rating -%}
+                       <div class="rating">
+                         {%- if block.settings.product_name != blank -%}
+                           <span class="testimonial__product-name">{{ block.settings.product_name | escape }}</span>
+                         {%- endif -%}
+                         <div class="rating__stars" role="img" aria-label="{{ 'general.rating.info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
+                           {%- for i in (1..5) -%}
+                             {%- if i <= block.settings.rating -%}
+                               {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--full' -%}
+                             {%- else -%}
+                               {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--empty' -%}
+                             {%- endif -%}
+                           {%- endfor -%}
+                         </div>
+                       </div>
+                     {%- endif -%}
+ 
+                     {%- if block.settings.author != blank -%}
+                       <p class="text-subdued">{{ block.settings.author | escape }}</p>
+                     {%- endif -%}
+                   </div>
+                 </div>
+                
+              {%- endif -%}
+
+              {%- if block.settings.title != blank or block.settings.content != blank -%}
+                <div class="v-stack gap-2 sm:gap-2.5">
+                  {%- if block.settings.title != blank -%}
+                    <p class="bold">{{ block.settings.title | escape }}</p>
+                  {%- endif -%}
+                  <span class="review-contant">
+                  {{- block.settings.content -}}
+                    </span>
+                </div>
+              {%- endif -%}
+                  </div>
+            </div>
+          {%- endfor -%}
+        </scroll-carousel>
+        
+        <!-- 新增自定义控制按钮 -->
+        <div class="custom-carousel-controls">
+          <button class="prev-button" aria-label="{{ 'general.accessibility.previous' | t }}">
+            {%- render 'icon' with 'chevron-left' -%}
+          </button>
+          <button class="next-button" aria-label="{{ 'general.accessibility.next' | t }}">
+            {%- render 'icon' with 'chevron-right' -%}
+          </button>
+        </div>
+        
+        {%- unless section.settings.stack_testimonials -%}
+          {%- render 'scrollbar', 
+            observes: scroll_area_id, 
+            default_progress: default_progress, 
+            show_buttons: false  <!-- 这里关闭原按钮 -->
+          -%}
+        {%- endunless -%}
+      </div>
+    </div>
+  </div>
+  <script>
+  (function() {
+    const carousel = document.querySelector('#{{ scroll_area_id }}');
+    const controlsContainer = carousel.closest('.scrollable-with-controls');
+    const prevButton = controlsContainer.querySelector('.prev-button');
+    const nextButton = controlsContainer.querySelector('.next-button');
+
+    if (carousel && prevButton && nextButton) {
+      // 初始隐藏向左按钮
+      prevButton.style.visibility = 'hidden';
+
+      const updateButtonVisibility = () => {
+        const { scrollLeft, scrollWidth, offsetWidth } = carousel;
+        const isAtStart = scrollLeft < 10;
+        const isAtEnd = scrollLeft > scrollWidth - offsetWidth - 10;
+
+        prevButton.style.visibility = isAtStart ? 'hidden' : 'visible';
+        nextButton.style.visibility = isAtEnd ? 'hidden' : 'visible';
+      };
+
+      prevButton.addEventListener('click', () => {
+        carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
+      });
+
+      nextButton.addEventListener('click', () => {
+        carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+      });
+
+      // 初始化时检查一次
+      updateButtonVisibility();
+      
+      // 滚动时更新
+      carousel.addEventListener('scroll', updateButtonVisibility);
+    }
+  })();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "class": "shopify-section--testimonials",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "Product name",
+          "info": "Product name"
+        },
+        {
+          "type": "image_picker",
+          "id": "reviews_image",
+          "label": "Image",
+          "info": "Reviews Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Avatar",
+          "info": "250 x 250px .jpg recommended"
+        },
+        {
+          "type": "checkbox",
+          "id": "round_avatar",
+          "label": "Round avatar",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "label": "Show rating",
+          "default": true
+        },
+        {
+          "type": "range",
+          "min": 0,
+          "max": 5,
+          "id": "rating",
+          "label": "Rating",
+          "default": 4
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Testimonial"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_testimonials",
+      "label": "Stack testimonials",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Testimonials"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "color_background",
+      "id": "heading_gradient",
+      "label": "Heading gradient"
+    },
+    {
+      "type": "color",
+      "id": "testimonial_card_background",
+      "label": "Testimonial card background"
+    },
+    {
+      "type": "color",
+      "id": "testimonial_card_text_color",
+      "label": "Testimonial card text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Reviews",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 4,
+            "author": "John S.",
+            "title": "Testimonial 1",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "author": "Mary U.",
+            "title": "Testimonial 2",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 4,
+            "author": "Joshua A.",
+            "title": "Testimonial 3",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
